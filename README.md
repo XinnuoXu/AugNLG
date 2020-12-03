@@ -1,9 +1,6 @@
 # SC-GPT
 
-This repository is forked from `pengbaolin/SC-GPT` for the following paper:
-
-[Few-shot Natural Language Generation for Task-Oriented Dialog](https://arxiv.org/abs/2002.12328)
-Baolin Peng, Chenguang Zhu, Chunyuan Li, Xiujun Li, Jinchao Li, Michael Zeng and Jianfeng Gao
+This repository is forked from `pengbaolin/SC-GPT` for the following paper: [Few-shot Natural Language Generation for Task-Oriented Dialog](https://arxiv.org/abs/2002.12328)
 
 
 ## Dataset: FewShotWoz
