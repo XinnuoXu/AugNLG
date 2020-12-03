@@ -7,7 +7,7 @@ This repository is forked from `pengbaolin/SC-GPT` for paper [Few-shot Natural L
 
 **Data path**
 
-FewShotWoz data is in directory `./data/FewShotWoz/`. Original data from the [paper](https://arxiv.org/abs/2002.12328) is in sub-directories `./data/FewShotWoz/{domain}`. The Reddit-based augmentations are in `./data/FewShotWoz/{domain}.pre_train`
+FewShotWoz data is in directory `./data/FewShotWoz/`. Original data from the [paper](https://arxiv.org/abs/2002.12328) is in sub-directories `./data/FewShotWoz/{domain}`. The Reddit-based augmentations are in `./data/FewShotWoz/{domain}.pre_train`.
 
 **Data files includes** 
 
@@ -16,18 +16,9 @@ There are two `.txt` files in each sub-directory:
 * <code>{domain}/test.txt</code>: linearized testing set for GPT-2 models.
 
 **Data format**
-```json
-[
-"inform(name='hakka restaurant';pricerange=moderate)", 
-"hakka restaurant is moderate -ly priced", 
-"hakka restaurant is moderate -ly priced" 
-]
 
-First item: dialog act
-Second item: corresponding natural language description
-Thrid item: repeated for evaluation script
-
-Linearized as:
+File `train.txt` and `test.txt` share same format, `Linearized dialogue act & correlated sentence`, for example:
+```
 inform ( name = hakka restaurant ; pricerange = moderate ) & hakka restaurant is moderate -ly priced
 ```
 
