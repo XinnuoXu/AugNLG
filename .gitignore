@@ -32,6 +32,7 @@ transformers/
 scgpt/
 results_*
 result.*/
+data/*/*/models/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
