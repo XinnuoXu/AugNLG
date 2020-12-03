@@ -17,27 +17,24 @@ There are two `.txt` files in each sub-directory:
 
 ### Data format
 
-File `train.txt` and `test.txt` share same format, `Linearized dialogue act & correlated sentence`, for example:
+File `train.txt` and `test.txt` share the same format, `Linearized dialogue act & Correlated sentence`, for example:
 ```
 inform ( name = hakka restaurant ; pricerange = moderate ) & hakka restaurant is moderate -ly priced
 ```
 
-## Pipeline
-*The code is still under cleanup. More details of code usage will be added soon*
+## Quickstart
 
-**Setup**
+### Baselines training
+* `GPT-2`: Fine-tuning GPT-2 with few-shot in-domain NLG examples. Run `sh train_gpt2.sh {domain}`
+* `SC-GPT`: Fine-tuning GPT-2 with 1) dialogue data from other domains 2) few-shot in-domain examples
+  - Fetch and unzip the checkpoint for the first fine-tuning
+    ```bash
+    wget https://bapengstorage.blob.core.windows.net/fileshare/scgpt.tar.gz
+    tar -xvf scgpt.tar.gz
+    ```
+  - Run the second fine-tuning `sh train_scgpt.sh {domain}`
 
-Please use the below command to clone and install the requirements.
-```bash
-git clone https://github.com/pengbaolin/SC-GPT.git
-cd SC-GPT
-pip install -r requirements.txt
-```
-Fetch and unzip the checkpoint
-```bash
-wget https://bapengstorage.blob.core.windows.net/fileshare/scgpt.tar.gz
-tar -xvf scgpt.tar.gz
-```
+
 **Training**
 ```bash
 export CUDA_VISIBLE_DEVICES=0
