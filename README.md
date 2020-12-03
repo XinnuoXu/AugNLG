@@ -41,7 +41,7 @@ inform ( name = hakka restaurant ; pricerange = moderate ) & hakka restaurant is
 ### Decoding
 Training checkpoints are stored in directory `models.{domain}`. To decode (inference) all models run `sh decode.sh {domain}`. You can find the decoding results in file `results_{domain}.json`.
 
-### Evaluate
+### Evaluation
 To evaluate the output, run `sh evaluate.sh {domain}`
 
 *script for attraction/train/taxi will be provided soon*
