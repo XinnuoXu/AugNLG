@@ -1,17 +1,10 @@
-# Few-shot Natural Language Generation for Task-Oriented Dialog 
+# SC-GPT
 
-This repository contains the dataset, source code and trained model for the following paper:
+This repository is forked from `pengbaolin/SC-GPT` for the following paper:
 
 [Few-shot Natural Language Generation for Task-Oriented Dialog](https://arxiv.org/abs/2002.12328)
 Baolin Peng, Chenguang Zhu, Chunyuan Li, Xiujun Li, Jinchao Li, Michael Zeng and Jianfeng Gao
 
-ArXiv paper: [https://arxiv.org/abs/2002.12328](https://arxiv.org/abs/2002.12328)
-
-This repository is based on hugginface transformer package and OpenAI GPT-2, containing model training code and pretrained medium model checkpoint. Some evaluation scripts are adapted from [RNNLG]([https://github.com/shawnwun/RNNLG](https://github.com/shawnwun/RNNLG)). The results indicate that with minimal training examples, SC-GPT is able to generate natural language response given dialog acts naturally and adequately. It can be used to train an NLG model in new domains with very limited examples.
-
-The include scripts can be used to reproduce the results reported in the paper.
-
-Project and demo webpage: [https://aka.ms/scgpt](https://aka.ms/scgpt)
 
 ## Dataset: FewShotWoz
 *FewShotWoz* is constructed using dataset from RNNLG and MultiWoz.
