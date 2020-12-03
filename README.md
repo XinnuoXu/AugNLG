@@ -5,7 +5,7 @@ This repository is forked from `pengbaolin/SC-GPT` for paper [Few-shot Natural L
 
 ## Dataset: FewShotWoz
 
-**Data path**
+### Data path
 
 FewShotWoz data is in directory `./data/FewShotWoz/`. Original data from the [paper](https://arxiv.org/abs/2002.12328) is in sub-directories `./data/FewShotWoz/{domain}`. The Reddit-based augmentations are in `./data/FewShotWoz/{domain}.pre_train`.
 
