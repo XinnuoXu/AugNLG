@@ -1,4 +1,4 @@
-# SC-GPT
+# GPT-NLG
 
 This repository is forked from `pengbaolin/SC-GPT` for paper [Few-shot Natural Language Generation for Task-Oriented Dialog](https://arxiv.org/abs/2002.12328)
 
@@ -7,13 +7,12 @@ This repository is forked from `pengbaolin/SC-GPT` for paper [Few-shot Natural L
 
 **Data path**
 
-FewShotWoz data is in dir `./data/FewShotWoz/`. FewShotWoz data from the [original paper](https://arxiv.org/abs/2002.12328) is in directories `./data/FewShotWoz/{domain}`. The Reddit-based augmentations are in `./data/FewShotWoz/{domain}.pre_train`
+FewShotWoz data is in directory `./data/FewShotWoz/`. Original data from the [paper](https://arxiv.org/abs/2002.12328) is in sub-directories `./data/FewShotWoz/{domain}`. The Reddit-based augmentations are in `./data/FewShotWoz/{domain}.pre_train`
 
 **Data files includes** 
 
-<code>{domain}/train.json</code>: training set in json format used for evaluation, other package like RNNLG also need this format.
+There are two `.txt` files in each sub-directory:
 <code>{domain}/train.txt</code>: linearized training set for GPT-2 models.
-<code>{domain}/test.json</code>: testing set in json format.
 <code>{domain}/test.txt</code>: linearized testing set for GPT-2 models.
 
 **Data format**
