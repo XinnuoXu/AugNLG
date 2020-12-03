@@ -15,6 +15,9 @@ LR=1e-5
 DOMAIN=$1
 PRE_TRAINED_MODEL_PATH=gpt2-medium
 MODEL_SAVE_PATH=./models.${DOMAIN}/
+DATA_TYPE=FewShotWoz
+
+mkdir ./data/${DATA_TYPE}/${DOMAIN}/./models.${DOMAIN}/
 
 python train.py \
 	--output_dir=${MODEL_SAVE_PATH} \
@@ -22,11 +25,11 @@ python train.py \
 	--do_train \
 	--do_eval \
 	--model_name_or_path=${PRE_TRAINED_MODEL_PATH} \
-	--eval_data_file=data/${DOMAIN}/train.txt \
+	--eval_data_file=data/${DATA_TYPE}/${DOMAIN}/train.txt \
 	--per_gpu_train_batch_size 1 \
 	--num_train_epochs ${EPOCH} \
 	--learning_rate ${LR} \
 	--overwrite_cache \
 	--use_tokenize \
-	--train_data_file=data/${DOMAIN}/train.txt \
+	--train_data_file=data/${DATA_TYPE}/${DOMAIN}/train.txt \
 	--overwrite_output_dir

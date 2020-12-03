@@ -21,18 +21,21 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--domain", default=None, type=str, required=True, help="Please specify a domain")
+    parser.add_argument("--data_type", default=None, type=str, required=True, help="Please specify a type from FewShotWoz, FewShotWoz.v0")
     parser.add_argument("--target_file", default=None, type=str, required=True, help="Please specify the result file")
     args = parser.parse_args()
 
     domain = args.domain
     target_file = args.target_file
+    data_type = args.data_type
 
-    train       = f'data/{domain}/train.json'
-    valid       = f'data/{domain}/train.json'
-    test        = f'data/{domain}/test.json'
+    train       = f'data/{data_type}/{domain}/train.json'
+    valid       = f'data/{data_type}/{domain}/train.json'
+    test        = f'data/{data_type}/{domain}/test.json'
     vocab       = 'utils/resource/vocab'
     percentage  = 100
     topk        = 5
+    print (train, valid, test)
     detectpairs = 'utils/resource/detect.pair'
 
     reader = DataReader(random_seed, domain, 'dt', vocab, train, valid, test, 100 , 0, lexCutoff=4)
