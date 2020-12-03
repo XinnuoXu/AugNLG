@@ -18,6 +18,7 @@ MODEL_SAVE_PATH=./models.${DOMAIN}/
 DATA_TYPE=FewShotWoz
 
 mkdir ./data/${DATA_TYPE}/${DOMAIN}/./models.${DOMAIN}/
+mkdir ${MODEL_SAVE_PATH}
 
 python train.py \
 	--output_dir=${MODEL_SAVE_PATH} \
