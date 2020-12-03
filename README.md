@@ -12,8 +12,8 @@ FewShotWoz data is in directory `./data/FewShotWoz/`. Original data from the [pa
 **Data files includes** 
 
 There are two `.txt` files in each sub-directory:
-<code>{domain}/train.txt</code>: linearized training set for GPT-2 models.
-<code>{domain}/test.txt</code>: linearized testing set for GPT-2 models.
+* <code>{domain}/train.txt</code>: linearized training set for GPT-2 models.
+* <code>{domain}/test.txt</code>: linearized testing set for GPT-2 models.
 
 **Data format**
 ```json
