@@ -63,7 +63,7 @@ mv ./data_augmentation/FewShotWoz.self-learning/restaurant.pre_train/ ./data/
     ```
   - Run the fine-tuning (2) `sh train_scgpt.sh {domain}`
 
-### AUG-NLG training
+### AUG-NLG (and other models) training
 * Step1: Fine-tune GPT-2 with Reddit-augmented examples. Run `sh pre_train.sh {domain}`
 * Step2: Fine-tune model from step1 with few-shot in-domain NLG examples. Run `sh train.sh {domain}`
 
