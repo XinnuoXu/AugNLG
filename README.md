@@ -9,10 +9,12 @@ This repository is forked from `pengbaolin/SC-GPT` for paper [Few-shot Natural L
 
 Oritinal [FewshotWoz](https://arxiv.org/abs/2002.12328) and FewshotSGD data are in directory `./data_original/`. Augmented data is in directory `./data_augmentation/`. Specifically,
 
-* Oritinal FewshotWoz data is in directory ./data_original/FewShotWoz/
-* Oritinal FewshotSGD data is in directory ./data_original/SGD/
+* Oritinal FewshotWoz data is in directory .`/data_original/FewShotWoz/`
+* Oritinal FewshotSGD data is in directory `./data_original/SGD/`
 * Augmented data for FewshotWoz:
-  * pre-trainning AUG-GPT is in directory ./data_augmentation/FewShotWoz.self-learning/
+  * Pre-trainning data for AUG-GPT is in directory `./data_augmentation/FewShotWoz.self-learning/`
+  * Pre-trainning data for SC-NLU is in directory `./data_augmentation/FewShotWoz.scgpt.after_nlu/`
+  * Pre-trainning data for SC-NLU+AUG is in directory `./data_augmentation/FewShotWoz.scgpt.after_nlu/`
 
 
 FewShotWoz data is in directory `./data/FewShotWoz/`. Original data from the [paper](https://arxiv.org/abs/2002.12328) is in sub-directories `./data/FewShotWoz/{domain}`. The Reddit-based augmentations are in `./data/FewShotWoz/{domain}.pre_train`.
