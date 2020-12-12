@@ -45,8 +45,10 @@ Before training and pre-training, create a directory `./data/`. Move the oringia
 ```
 # Create a new directory
 mkdir ./data/
+
 # Fetch the oringial in-domain seed data for fine-tuning and testing
 mv ./data_original/FewShotWoz/restaurant ./data/
+
 # Fetch the pre-training data
 mv ./data_augmentation/FewShotWoz.self-learning/restaurant.pre_train/ ./data/
 ```
