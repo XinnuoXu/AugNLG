@@ -5,18 +5,16 @@ This repository is forked from `pengbaolin/SC-GPT` for paper [Few-shot Natural L
 
 ## Dataset
 
-### Data path
-
 Oritinal [FewshotWoz](https://arxiv.org/abs/2002.12328) and FewshotSGD data are in directory `./data_original/`. Augmented data is in directory `./data_augmentation/`. Specifically,
 
 * Oritinal FewshotWoz data is in directories .`/data_original/FewShotWoz/{domain}`
 * Oritinal FewshotSGD data is in directories `./data_original/SGD/{domain}`
 * Augmented data for FewshotWoz:
-  * Pre-trainning data for AUG-GPT is in directories `./data_augmentation/FewShotWoz.self-learning/{domain}.pre_train`
-  * Pre-trainning data for SC-NLU is in directories `./data_augmentation/FewShotWoz.SC-NLU/{domain}.pre_train`
-  * Pre-trainning data for SC-NLU+AUG is in directories `./data_augmentation/FewShotWoz.SC-NLU_AUG/{domain}.pre_train`
+  * Pre-training data for AUG-GPT is in directories `./data_augmentation/FewShotWoz.self-learning/{domain}.pre_train`
+  * Pre-training data for SC-NLU is in directories `./data_augmentation/FewShotWoz.SC-NLU/{domain}.pre_train`
+  * Pre-training data for SC-NLU+AUG is in directories `./data_augmentation/FewShotWoz.SC-NLU_AUG/{domain}.pre_train`
 * Augmented data for FewshotSGD:
-  * Pre-trainning data for AUG-GPT is in directories `./data_augmentation/FewShotSGD.self-learning/{domain}.pre_train`
+  * Pre-training data for AUG-GPT is in directories `./data_augmentation/FewShotSGD.self-learning/{domain}.pre_train`
 
 
 ### Data files includes
@@ -34,6 +32,9 @@ inform ( name = hakka restaurant ; pricerange = moderate ) & hakka restaurant is
 ```
 
 ## Quickstart
+
+### Data processing
+Before training and pre-training, create a directory `./data/`. Move the oritinal data (directories under `/data_original/`) and the pre-training data (directories under `./data_augmentation/`) to `./data/`.
 
 ### Baselines training
 * `GPT-2`: Fine-tune GPT-2 with few-shot in-domain NLG examples. Run `sh train_gpt2.sh {domain}`
