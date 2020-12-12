@@ -2,6 +2,13 @@
 
 This repository is forked from `pengbaolin/SC-GPT` for paper [Few-shot Natural Language Generation for Task-Oriented Dialog](https://arxiv.org/abs/2002.12328)
 
+## Initialize the environment
+
+```
+conda create -n FS_NLG python=3.6
+conda activate FS_NLG
+pip install -r requirements.txt
+```
 
 ## Dataset
 
