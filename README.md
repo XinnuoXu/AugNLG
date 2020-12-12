@@ -41,7 +41,7 @@ inform ( name = hakka restaurant ; pricerange = moderate ) & hakka restaurant is
 ## Quickstart
 
 ### Data processing
-Before training and pre-training, create a directory `./data/`. Move the oritinal data (directories under `/data_original/`) and the pre-training data (directories under `./data_augmentation/`) to `./data/`.
+Before training and pre-training, create a directory `./data/`. Move the oritinal data (directories under `/data_original/SGD/` or `/data_original/FewShotWoz/`) and the specific pre-training data (directories under `./data_augmentation/*/`) to `./data/`.
 
 ### Baselines training
 * `GPT-2`: Fine-tune GPT-2 with few-shot in-domain NLG examples. Run `sh train_gpt2.sh {domain}`
