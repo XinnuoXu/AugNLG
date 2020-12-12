@@ -14,8 +14,8 @@ pip install -r requirements.txt
 
 Oritinal [FewshotWoz](https://arxiv.org/abs/2002.12328) and FewshotSGD data are in directory `./data_original/`. Augmented data is in directory `./data_augmentation/`. Specifically,
 
-* Oritinal FewshotWoz data is in directories .`/data_original/FewShotWoz/{domain}`
-* Oritinal FewshotSGD data is in directories `./data_original/SGD/{domain}`
+* Oringial FewshotWoz data is in directories .`/data_original/FewShotWoz/{domain}`
+* Oringial FewshotSGD data is in directories `./data_original/SGD/{domain}`
 * Augmented data for FewshotWoz:
   * Pre-training data for AUG-GPT is in directories `./data_augmentation/FewShotWoz.self-learning/{domain}.pre_train`
   * Pre-training data for SC-NLU is in directories `./data_augmentation/FewShotWoz.SC-NLU/{domain}.pre_train`
@@ -41,7 +41,15 @@ inform ( name = hakka restaurant ; pricerange = moderate ) & hakka restaurant is
 ## Quickstart
 
 ### Data processing
-Before training and pre-training, create a directory `./data/`. Move the oritinal data (directories under `/data_original/SGD/` or `/data_original/FewShotWoz/`) and the specific pre-training data (directories under `./data_augmentation/*/`) to `./data/`.
+Before training and pre-training, create a directory `./data/`. Move the oringial data (directories under `./data_original/SGD/` or `./data_original/FewShotWoz/`) and the specific pre-training data (directories under `./data_augmentation/*/`) to `./data/`. For examle, if you are interested in domain `restaurant` in FewShotWoz dataset, with pretraining data used in `AUG-GPT`, run:
+```
+# Create a new directory
+mkdir ./data/
+# Fetch the oringial in-domain seed data for fine-tuning and testing
+mv ./data_original/FewShotWoz/restaurant ./data/
+# Fetch the pre-training data
+mv ./data_augmentation/FewShotWoz.self-learning/restaurant.pre_train/ ./data/
+```
 
 ### Baselines training
 * `GPT-2`: Fine-tune GPT-2 with few-shot in-domain NLG examples. Run `sh train_gpt2.sh {domain}`
