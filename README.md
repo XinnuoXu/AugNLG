@@ -71,7 +71,6 @@ mv ./data_augmentation/FewShotWoz.self-learning/restaurant.pre_train/ ./data/
 Training checkpoints are stored in directory `models.{domain}`. To decode (inference) all models run `sh decode.sh {domain}`. You can find the decoding results in file `results_{domain}.json`.
 
 ### Evaluation
-To evaluate the output, run `sh evaluate.sh {domain}`
-
-*script for attraction/train/taxi will be provided soon*
+To evaluate the output on FewShotWoz dataset, run `sh evaluate.sh {domain}`
+To evaluate the output on FewShotSGD dataset, run `sh evaluate_bleu.sh {domain}`
 
