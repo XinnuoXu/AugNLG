@@ -3,25 +3,26 @@
 This repository is forked from `pengbaolin/SC-GPT` for paper [Few-shot Natural Language Generation for Task-Oriented Dialog](https://arxiv.org/abs/2002.12328)
 
 
-## Dataset: FewShotWoz
-
-### Data path
+## Dataset
 
 Oritinal [FewshotWoz](https://arxiv.org/abs/2002.12328) and FewshotSGD data are in directory `./data_original/`. Augmented data is in directory `./data_augmentation/`. Specifically,
 
-* Oritinal FewshotWoz data is in directory ./data_original/FewShotWoz/
-* Oritinal FewshotSGD data is in directory ./data_original/SGD/
+* Oritinal FewshotWoz data is in directories .`/data_original/FewShotWoz/{domain}`
+* Oritinal FewshotSGD data is in directories `./data_original/SGD/{domain}`
 * Augmented data for FewshotWoz:
-  * pre-trainning AUG-GPT is in directory ./data_augmentation/FewShotWoz.self-learning/
+  * Pre-training data for AUG-GPT is in directories `./data_augmentation/FewShotWoz.self-learning/{domain}.pre_train`
+  * Pre-training data for SC-NLU is in directories `./data_augmentation/FewShotWoz.SC-NLU/{domain}.pre_train`
+  * Pre-training data for SC-NLU+AUG is in directories `./data_augmentation/FewShotWoz.SC-NLU_AUG/{domain}.pre_train`
+* Augmented data for FewshotSGD:
+  * Pre-training data for AUG-GPT is in directories `./data_augmentation/FewShotSGD.self-learning/{domain}.pre_train`
 
-
-FewShotWoz data is in directory `./data/FewShotWoz/`. Original data from the [paper](https://arxiv.org/abs/2002.12328) is in sub-directories `./data/FewShotWoz/{domain}`. The Reddit-based augmentations are in `./data/FewShotWoz/{domain}.pre_train`.
 
 ### Data files includes
 
 There are two `.txt` files in each sub-directory:
 * <code>{domain}/train.txt</code>: linearized training set for GPT-2 models.
 * <code>{domain}/test.txt</code>: linearized testing set for GPT-2 models.
+
 
 ### Data format
 
@@ -31,6 +32,9 @@ inform ( name = hakka restaurant ; pricerange = moderate ) & hakka restaurant is
 ```
 
 ## Quickstart
+
+### Data processing
+Before training and pre-training, create a directory `./data/`. Move the oritinal data (directories under `/data_original/`) and the pre-training data (directories under `./data_augmentation/`) to `./data/`.
 
 ### Baselines training
 * `GPT-2`: Fine-tune GPT-2 with few-shot in-domain NLG examples. Run `sh train_gpt2.sh {domain}`
