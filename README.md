@@ -15,7 +15,7 @@ Oritinal [FewshotWoz](https://arxiv.org/abs/2002.12328) and FewshotSGD data are 
   * Pre-trainning data for AUG-GPT is in directories `./data_augmentation/FewShotWoz.self-learning/{domain}.pre_train`
   * Pre-trainning data for SC-NLU is in directories `./data_augmentation/FewShotWoz.SC-NLU/{domain}.pre_train`
   * Pre-trainning data for SC-NLU+AUG is in directories `./data_augmentation/FewShotWoz.SC-NLU_AUG/{domain}.pre_train`
- * Augmented data for FewshotSGD:
+* Augmented data for FewshotSGD:
   * Pre-trainning data for AUG-GPT is in directories `./data_augmentation/FewShotSGD.self-learning/{domain}.pre_train`
 
 
