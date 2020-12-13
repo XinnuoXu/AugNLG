@@ -61,6 +61,11 @@ mv ./data_augmentation/FewShotWoz.self-learning/restaurant.pre_train/ ./data/
     wget https://bapengstorage.blob.core.windows.net/fileshare/scgpt.tar.gz
     tar -xvf scgpt.tar.gz
     ```
+    or
+    ```bash
+    mv data_augmentation/FewShotWoz.SC-GPT/scgpt.pre_train ./data/
+    sh pre_train_scgpt.sh
+    ```
   - Run the fine-tuning (2) `sh train_scgpt.sh {domain}`
 
 ### AUG-NLG (and other models) training
