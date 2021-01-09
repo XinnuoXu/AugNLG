@@ -14,7 +14,8 @@ EPOCH=10
 LR=1e-5
 DOMAIN=$1
 PRE_TRAINED_MODEL_PATH=./scgpt
-MODEL_SAVE_PATH=./models.${DOMAIN}/
+#MODEL_SAVE_PATH=./models.${DOMAIN}/
+MODEL_SAVE_PATH=/scratch/xxu/few_shot_nlg/NLG/models.${DOMAIN}/
 
 mkdir ./data/${DOMAIN}/./models.${DOMAIN}/
 mkdir ${MODEL_SAVE_PATH}

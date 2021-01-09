@@ -9,7 +9,8 @@
 #DOMAIN=attraction
 DOMAIN=$1
 
-MODEL_SAVE_PATH=./models.${DOMAIN}/
+#MODEL_SAVE_PATH=./models.${DOMAIN}/
+MODEL_SAVE_PATH=/scratch/xxu/few_shot_nlg/NLG/models.${DOMAIN}/
 
 python generate.py \
 	--model_type=gpt2 \
