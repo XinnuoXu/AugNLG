@@ -1,0 +1,11 @@
+NOTIFY_FAILURE ( none = none ) @ REQ_MORE ( none = none ) & sorry , i could not comprehend you . do you require further assistance ?
+REQUEST ( city = ? ) & which city will i check ?
+INFORM ( wind = 12 ; humidity = 15 ) & the wind speed will be about 12 miles per hour and the humidity will be around 15 percent .
+INFORM ( wind = 7 ) & the wind will be about 7 miles an hour average .
+INFORM ( humidity = 39 ; wind = 2 ) & the humidity is 39 percent and the wind speed would be 2 miles per hour .
+REQ_MORE ( none = none ) & with something else i can help you ?
+INFORM ( date = march 1st ) & that would be the march 1st forecast .
+INFORM ( humidity = 35 ; date = march 1st ) & the forecast was for today , march 1st . there 's a humidity of 35 percent .
+OFFER ( temperature = 91 ; precipitation = 15 ) & it will be approximately 91 degrees fahrenheit with a chance of rain of 15 percent .
+INFORM ( wind = 3 ; date = march 1st ) & it 's march 1st and the forecast was for today . the wind speed is 3 miles per hour on average .
+INFORM ( humidity = 21 ) & it will be 21 percent humidity

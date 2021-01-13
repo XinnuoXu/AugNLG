@@ -1,0 +1,50 @@
+INFORM ( phone_number = +60 3-2110 2211 ; total_price = 832 ) & the phone is +60 3-2110 2211 . the price is 832 bucks .
+CONFIRM ( number_of_days = 1 ; destination = london ) & okay , so now i have the hotel in london for 1 day . is that right ?
+REQUEST ( number_of_adults = ? ; check_out_date = ? ; check_in_date = march 1st ) & how many people will be staying there ? do you want to check in on march 1st ? when do you want to check out .
+INFORM ( rating = 4.0 ; has_laundry_service = true ) @ NOTIFY_SUCCESS ( none = none ) & the hotel is rated 4.0 and there is laundry service . your reservation has been placed .
+INFORM ( price = $1,260 ; pets_welcome = false ) @ NOTIFY_SUCCESS ( none = none ) & i 've made the reservation . it will cost $ 1,260 and unfortunately they do not allow pets .
+INFORM ( phone_number = +1 202-337-6620 ; price = $312 ) & the price is $ 312 and the phone number is +1 202-337-6620 .
+REQUEST ( number_of_adults = ? ; check_in_date = march 1st ; check_out_date = ? ) & for how many people you need the house ? will you be going there on march 1st ? when will you be leaving the house ?
+REQUEST ( where_to = ? ) & which city would you like to stay in ?
+INFORM ( total_price = 2976 ; phone_number = +44 333 400 6116 ) & the total price is 2976 dollars and the phone number is +44 333 400 6116 .
+REQUEST ( check_out_date = ? ) & which day do you want to check out ?
+REQUEST ( destination = ? ; hotel_name = ? ) & i 'd be happy to . where should i start the search ? do you have a particular hotel in mind ?
+INFORM ( phone_number = +1 604-669-7070 ; street_address = 1100 granville street ) & you can contact them at +1 604-669-7070 and visit them at 1100 granville street .
+INFORM ( average_rating = 4.0 ; pets_welcome = false ) & this hotel has a 4.0 rating and they do not allow pets .
+CONFIRM ( check_in_date = day after tomorrow ; where_to = paris ) & you would like to check in the day after tomorrow in paris ?
+CONFIRM ( number_of_adults = 3 ; check_out_date = march 7th ) & you want a reservation for 3 people with a departure date of march 7th . is that right ?
+REQUEST ( hotel_name = ? ; number_of_days = ? ; check_in_date = ? ) & what hotel ? how many days ? what is the check in date ?
+CONFIRM ( check_in_date = march 9th ; number_of_rooms = 1 ) & please confirm to book 1 room from march 9th .
+REQUEST ( check_in_date = ? ; where_to = ? ) & where would you like to stay , and which day do you want to check in ?
+REQUEST ( check_in_date = ? ; location = ? ) & okay , what date are you checking in on ? what city is the hotel located in ?
+REQUEST ( hotel_name = ? ; check_in_date = ? ; location = ? ) & any preference on the specific hotel and the location of the hotel ? when will you be checking in ?
+REQUEST ( check_in_date = march 1st ; check_out_date = ? ; number_of_adults = ? ) & will you be arriving march 1st . what day are leaving and how many in your party ?
+REQUEST ( check_in_date = ? ; where_to = ? ; check_out_date = ? ) & where are you going ? what days do you need it for ?
+REQUEST ( number_of_days = ? ; destination = ? ; check_in_date = ? ) & for how many days will you be needing the room ? is there some specific city you want the hotel to be , and could you please tell me when you will go there ?
+INFORM ( has_wifi = true ; price_per_night = $44 ) & it has wifi and is $ 44 .
+INFORM ( pets_welcome = true ) & surely , you can take pets in .
+REQUEST ( check_out_date = ? ; check_in_date = ? ; where_to = ? ) & ok , what is the name of the city you plan to stay in ? also , what would the check-in and check-out date be ?
+INFORM ( phone_number = +1 415-546-3110 ; rating = 3.9 ) & rating is at 3.9 and phone number +1 415-546-3110
+REQUEST ( hotel_name = ? ; destination = ? ; check_in_date = ? ) & do you have a specific hotel in mind that you would like me to book ? what town do you need the reservation in ? and on which date are you checking in ?
+REQUEST ( hotel_name = ? ; check_out_date = ? ) & sure , which hotel do you want to stay in ? when will you leave there ?
+REQUEST ( check_in_date = march 2nd ) & and will you be checking on march 2nd ?
+INFORM ( total_price = 2160 ; rating = 3.8 ) @ NOTIFY_SUCCESS ( none = none ) & your reservation has been confirmed . the total cost is 2160 and the rating is 3.8 .
+REQUEST ( hotel_name = ? ; destination = ? ; number_of_days = ? ) & i would love to help . which hotel are you considering and in which city should we search ? do you know how many days you will be staying ?
+REQUEST ( location = ? ; hotel_name = ? ) & where do you want me to look for your hotel ? do you have a favorite one ?
+REQUEST ( destination = ? ; number_of_days = ? ; check_in_date = ? ) & sure . where are you staying ? for how many days ? from when ?
+REQUEST ( check_out_date = ? ; number_of_adults = ? ; check_in_date = march 2nd ) & how many people will be in your group ? would you like to check in on march 2nd and which day would you like to check out ?
+CONFIRM ( number_of_days = 3 ; number_of_rooms = 2 ) & can you confirm the following : you 'd like 2 rooms for 3 days .
+CONFIRM ( where_to = washington d.c. ; number_of_adults = 4 ; check_in_date = march 3rd ; check_out_date = march 6th ) & please confirm : house for 4 in washington d.c. from march 3rd to march 6th .
+INFORM ( average_rating = 4.1 ; price = $1,456 ) @ NOTIFY_SUCCESS ( none = none ) & your reservation was successful . the hotel 's average rating is 4.1 and the total cost is $ 1,456 .
+REQ_MORE ( none = none ) & is there anything else i can help you with ?
+INFORM ( phone_number = +1 800-224-7835 ) & +1 800-224-7835
+REQUEST ( check_out_date = ? ; where_to = ? ; check_in_date = ? ) & what is the travel destination and reservation dates for your stay .
+REQUEST ( where_to = ? ; number_of_adults = ? ; check_in_date = ? ) & what city you planning to stay in ? around how many people are there in the group ? which day are you checking in ?
+REQUEST ( where_to = ? ; number_of_adults = ? ) & in which city are you planning to stay in ? also how many people are there in your group ?
+REQUEST ( check_out_date = ? ; hotel_name = ? ) & how long will you be staying ? do you have a hotel preference ?
+REQUEST ( check_in_date = ? ; destination = ? ; hotel_name = ? ) & when do you want to check in ? at what hotel in which city ?
+REQUEST ( hotel_name = ? ; number_of_days = ? ) & which hotel do you want to make the reservation at ? how many days will the reservation be fod ?
+INFORM ( rating = 4.5 ; phone_number = +1 212-248-1100 ) @ NOTIFY_SUCCESS ( none = none ) & your reservation is completed . the phone number is +1 212-248-1100 and the rating is 4.5 .
+INFORM ( phone_number = +61 2 8319 9888 ; destination = sydney ) @ NOTIFY_SUCCESS ( none = none ) & your reservation is successful.their phone number is +61 2 8319 9888.the hotel is located in sydney .
+CONFIRM ( where_to = paris ; check_in_date = today ) & let me see if i got that right : you 'd like to travel to paris , and check in today ?
+INFORM ( has_laundry_service = true ) & yes there is a laundry service .

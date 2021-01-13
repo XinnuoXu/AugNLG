@@ -1,0 +1,50 @@
+REQUEST ( pickup_time = ? ; pickup_date = ? ; pickup_city = ? ) & what time , where would you like it from , and which location would you want to pick it up ?
+NOTIFY_FAILURE ( none = none ) @ REQ_MORE ( none = none ) & sorry , i am not able to find any other cars available that meet your requirements . is there anything else that i can do for you today ?
+REQUEST ( pickup_time = ? ; pickup_date = ? ; car_type = ? ) & what time will need the car ? when do you want to get the car ? what kind of car would you like ?
+REQUEST ( pickup_city = ? ; pickup_date = ? ; pickup_time = ? ) & where do you want to pick it up from ? also when and which time do you need it ?
+REQUEST ( dropoff_date = march 11th ; car_type = standard, full-size ; pickup_date = march 6th ) & will you be picking it p on march 6th , and dropping it off on march 11th ? do you want a standard , full-size , or something else ?
+REQUEST ( pickup_date = ? ; pickup_location = ? ) & when will you need it from ? in which place do you want to pick up the car ?
+REQUEST ( dropoff_date = ? ; pickup_date = march 4th ; pickup_time = ? ) & will you be picking up the ride on march 4th and at what time ? also , until what date will you keep the rental ?
+REQUEST ( dropoff_date = march 14th ; pickup_date = march 2nd ; car_type = ? ) & is your drop off date march 14th and the pick up date march 2nd ? what type of car do you want ?
+REQUEST ( dropoff_date = march 8th ; car_type = ? ) & what type of car do you want and do you need it until march 8th ?
+REQUEST ( pickup_date = march 9th ; pickup_city = fresno ; dropoff_date = ? ) & is that for a fresno pick up on march 9th ? when do you need it until ?
+REQUEST ( pickup_location = sky harbor international airport ; dropoff_date = march 14th ; pickup_date = march 7th ) & will you be picking it up at sky harbor international airport on march 7th and returning it on march 14th ?
+REQUEST ( pickup_location = ? ; dropoff_date = ? ; pickup_time = ? ) & where would you like to pick up the car from and what time would you like to pick it up ? also , when do you need the car until ?
+REQUEST ( car_type = ? ; pickup_location = ? ; pickup_date = ? ) & what type of car would you like and where from ?
+REQUEST ( pickup_city = los angeles ; dropoff_date = ? ; pickup_time = ? ) & would you like to pick it up from los angeles and what date do you want the car until and time ?
+REQUEST ( car_type = standard, full-size ; pickup_date = ? ) & do you want a standard , compact , or full-size car ? and when do you want it from ?
+REQUEST ( dropoff_date = ? ; pickup_date = ? ; pickup_city = ? ) & sure , just let me know when and where you need to pick it up and when you plan on dropping it back off .
+REQUEST ( pickup_date = march 11th ; pickup_city = san diego ; pickup_time = ? ) & would you want the car starting march 11th ? would you be picking it up in san diego ? what time would you need it .
+REQUEST ( pickup_time = ? ; pickup_date = ? ; pickup_location = ? ) & when and where will you get it ?
+REQUEST ( pickup_location = ? ; pickup_time = ? ) & where would you like to pick it up and for what time ?
+REQUEST ( car_type = ? ; pickup_location = ? ; pickup_time = ? ) & what kind of car do you want ? where and when do you want it ?
+REQUEST ( dropoff_date = ? ) & when do you want to drop off ?
+CONFIRM ( pickup_location = jfk international airport ; car_type = standard ) & please confirm a standard car from jfk international airport .
+CONFIRM ( pickup_location = charles de gaulle international airport ; pickup_time = 4:30 pm ) & confirming a 4:30 pm pickup from charles de gaulle international airport .
+REQUEST ( pickup_date = ? ; car_type = ? ; dropoff_date = ? ) & do you have any preference on the type of car you would like ? what is your intended period of use for the car ?
+REQUEST ( car_type = ? ; dropoff_date = ? ) & do you like to book any particular type of car and also let me know for how many days you need the car ?
+OFFER ( pickup_location = yvr international airport ; pickup_date = march 2nd ; car_type = standard ; car_name = honda accord ) @ INFORM_COUNT ( count = 6 ) & i found 6 cars . a standard car , a honda accord , available at yvr international airport from march 2nd
+REQUEST ( car_type = ? ; pickup_time = ? ; pickup_location = lax international airport ) & what kind of car do you want ? are you picking up from lax international airport ? what time do you want to pick it up ?
+REQUEST ( type = ? ) & what type of car ?
+REQUEST ( type = ? ; dropoff_date = march 6th ; pickup_time = ? ) & what type of car you want to search for and please confirm whether you need it until march 6th ? . also let me know your expected pickup time ?
+REQUEST ( pickup_time = ? ; pickup_city = ? ; dropoff_date = ? ) & what time and where do you want to pick it up ? how long will you need the car ?
+REQUEST ( type = ? ; pickup_location = sky harbor international airport ) & what kind of car do you want ? do you want to pick it up from sky harbor international airport ?
+CONFIRM ( pickup_date = march 6th ; type = compact ) & to confirm then that is a compact car from march 6th .
+REQUEST ( type = ? ; pickup_location = ? ; pickup_date = ? ) & what date would you like to rent the car , from where do you want to pick it up , and do you have any type of car you prefer ?
+OFFER_INTENT ( intent = reservecar ) & would you like to reserve the car ?
+REQUEST ( pickup_time = ? ; dropoff_date = ? ; pickup_city = ? ) & what time and date do you want it and where are you picking it up ?
+REQUEST ( pickup_date = ? ; pickup_location = ? ; dropoff_date = ? ) & okay , what date will you pick it up and return it ? where do you want it from ?
+REQUEST ( type = compact, standard ; dropoff_date = march 12th ) & what type of car like compact or standard do you want and will the drop off date be march 12th ?
+REQUEST ( pickup_date = ? ; pickup_city = ? ) & where would you like the pickup to be and on what date ?
+REQUEST ( dropoff_date = ? ; pickup_city = ? ) & what day and where would you like to pick it up ?
+REQUEST ( car_type = ? ; pickup_date = march 3rd ; pickup_location = lax international airport ) & are you picking up on march 3rd at lax international airport ? do you know what kind of car you want ?
+REQUEST ( pickup_location = pdx international airport ; type = ? ) & are you getting it at pdx international airport ? what type of car do you want ?
+REQUEST ( pickup_date = ? ; dropoff_date = ? ) & when do you want it and till which date do you need the car ?
+GOODBYE ( none = none ) & have a good day .
+REQUEST ( pickup_location = sky harbor international airport ; car_type = full-size, standard ; pickup_time = ? ) & would you like a full-size , standard or something different ? will you be picking it up at sky harbor international airport ?
+REQUEST ( dropoff_date = march 11th ; type = standard, compact ; pickup_date = march 7th ) & do you want a standard car , a compact car , or something different ? do you want it from march 7th to march 11th ?
+REQUEST ( type = ? ; pickup_time = ? ; dropoff_date = march 14th ) & do you like to have a small sized , or compact car and at what time is your pick up and do you want to rent it till march 14th ?
+REQUEST ( pickup_location = ? ; dropoff_date = ? ) & where do you want to get your car and how long do you need it for ?
+REQUEST ( dropoff_date = ? ; pickup_date = ? ; type = ? ) & which dates would you like the car reserved ? what type do you prefer ?
+REQUEST ( pickup_date = ? ; car_type = compact, full-size ; pickup_location = ? ) & and what date would you like to start the rental ? where would you like to pick up the car from ? and is there a specific type of car you like such as compact or full-size .
+CONFIRM ( pickup_time = 4 pm ; dropoff_date = march 11th ) & confirming a 4 pm pick up and a march 11th drop off yes ?
