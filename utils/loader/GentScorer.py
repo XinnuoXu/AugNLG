@@ -182,12 +182,14 @@ class BLEUScorer(object):
         c = 0
         
         # accumulate ngram statistics
+        logs = []
         for hyps, refs in parallel_corpus:
             hyps = [hyp.split() for hyp in hyps]
             refs = [ref.split() for ref in refs]
             # compute ngram counts by matching each hypothesis
             for hyp in hyps:
                 # for each ngram
+                ngrams_values = []
                 for i in range(4):
                     # accumulate hyp ngram counts
                     hypcnts = Counter(ngrams(hyp,i+1))
@@ -208,6 +210,8 @@ class BLEUScorer(object):
                     clipcnt = dict( (ng,min(count,max_counts[ng])) \
                             for ng,count in hypcnts.items() )
                     clip_count[i] += sum(clipcnt.values())
+                    ngrams_values.append(sum(clipcnt.values())/cnt)
+                logs.append([' '.join(hyp), ' '.join(ref), ngrams_values])
 
                 # accumulate r & c, find best match among all references
                 bestmatch = [1000,1000]
@@ -239,7 +243,7 @@ class BLEUScorer(object):
         s = math.fsum(w*math.log(p_n) for w, p_n in zip(weights, p_ns) if p_n)
         # final sentence bleu score
         bleu_hyp = bp*math.exp(s)
-        return bleu_hyp
+        return bleu_hyp, logs
 
 
 class GentScorer(object):
