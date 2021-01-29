@@ -1,4 +1,5 @@
 import numpy as np
+import json
 import os
 import operator
 from math import sqrt
@@ -54,6 +55,7 @@ def main():
     idx = 0
     parallel_corpus, hdc_corpus = [], []
     gencnts, refcnts = [0.0,0.0,0.0],[0.0,0.0,0.0]
+    log_errors = []; dacts = []
     while True:
         # read data point
         data = reader.read(mode='test',batch=1)
@@ -94,8 +96,6 @@ def main():
             gen_strs_.append(gen_str)                    
             
 
-        
-
         gens = gen_strs_
         idx += 1
         topk = 1
@@ -114,6 +114,7 @@ def main():
 
         gens = [g[2] for g in gens_with_penalty][:1]
 
+        total_ex = 0; cnt_ex = 0
         for i in range(len(gens)):
             # score slot error rate
             delexed = reader.delexicalise(gens[i], dact)
@@ -123,6 +124,12 @@ def main():
             gencnts[0]  += cnt
             gencnts[1]  += total
             gencnts[2]  += caty
+            total_ex += total
+            cnt_ex += cnt
+        if cnt_ex == 0:
+            log_errors.append(-1)
+        else:
+            log_errors.append(total_ex/cnt_ex)
         
         # compute gold standard slot error rate
         for sent in sents:
@@ -136,24 +143,31 @@ def main():
 
         parallel_corpus.append([[g for g in gens], sents])
         hdc_corpus.append([bases[:1],sents])
+        dacts.append(dact)
     
     predicted_sentences = []
     
     for i in parallel_corpus:
         predicted_sentences.append(i[0][0])
 
-    bleuModel   = gentscorer.scoreSBLEU(parallel_corpus)
-    bleuHDC     = gentscorer.scoreSBLEU(hdc_corpus)
+    bleuModel, logs = gentscorer.scoreSBLEU(parallel_corpus)
+    #bleuHDC     = gentscorer.scoreSBLEU(hdc_corpus)
     print ('##############################################')
     print ('BLEU SCORE & SLOT ERROR on GENERATED SENTENCES')
     print ('##############################################')
     print ('Metric       :\tBLEU\tT.ERR\tA.ERR')
-    print ('HDC          :\t%.4f\t%2.2f%%\t%2.2f%%'% (bleuHDC,0.0,0.0))
+    #print ('HDC          :\t%.4f\t%2.2f%%\t%2.2f%%'% (bleuHDC,0.0,0.0))
     print ('Ref          :\t%.4f\t%2.2f%%\t%2.2f%%'% (1.0, 100*refcnts[1]/refcnts[0],100*refcnts[2]/refcnts[0]))
     print ('----------------------------------------------')
     print ('This Model   :\t%.4f\t%2.2f%%\t%2.2f%%'% (bleuModel, 100*gencnts[1]/gencnts[0],100*gencnts[2]/gencnts[0]))
-    
     print(f'FIELNAME: {target_file}, BLEU: {bleuModel}, ERR:{100*gencnts[1]/gencnts[0]}')
+
+    for i in range(len(logs)): 
+        logs[i].append(log_errors[i])
+        logs[i].insert(0, dacts[i])
+    fpout = open('./tmp.log.bleu', 'w')
+    fpout.write(json.dumps(logs))
+    fpout.close()
 
 
 if __name__ == "__main__":
