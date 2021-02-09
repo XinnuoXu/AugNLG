@@ -37,7 +37,9 @@ def main():
     results_from_gpt = json.load(open(target_file))
     gold_json = json.load(open(test))
     parallel_corpus, hdc_corpus = [], []
+    dacts = []
     for idx in range(len(results_from_gpt)):
+        dact = gold_json[idx][0]
         gold_strs = [gold_json[idx][1]]
         gen_strs = results_from_gpt[idx]
         gen_strs_single = []
@@ -55,9 +57,16 @@ def main():
             
         gens = gen_strs_
         parallel_corpus.append([gens[:1], gold_strs])
+        dacts.append(dact)
     
-    bleuModel   = gentscorer.scoreSBLEU(parallel_corpus)
+    bleuModel, logs = gentscorer.scoreSBLEU(parallel_corpus)
     print(f'FIELNAME: {target_file}, BLEU: {bleuModel}')
+
+    for i in range(len(logs)):
+        logs[i].insert(0, dacts[i])
+    fpout = open('./tmp.log.bleu', 'w')
+    fpout.write(json.dumps(logs))
+    fpout.close()
 
 
 if __name__ == "__main__":

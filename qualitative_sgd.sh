@@ -1,15 +1,15 @@
 #!/bin/bash
 
 DOMAIN=$1
-MODE=bleu_better
-#MODE=bleu_worse
+MODE=random
 
-declare -a StringArray=( "GPT-2" "SC-GPT" "AUG-GPT" "AUG-GPT-SC" )
+declare -a StringArray=( "GPT-2" "AUG-GPT" )
 for model in ${StringArray[@]};
 do
-	cp result_woz.$model/results_${DOMAIN}.json ./
+	cp result_sgd.$model/results_${DOMAIN}.json ./
 	sh evaluate_bleu.sh ${DOMAIN}
 	mv tmp.log.bleu tmp.log.bleu.$model
 done
 
 python qualitative.py $MODE
+mv tmp.sample tmp.sample.$DOMAIN
