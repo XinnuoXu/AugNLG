@@ -1,4 +1,6 @@
-# NLG_adaption
+# AugNLG
+
+Code for paper "*Xinnuo Xu, Guoyin Wang, Young-Bum Kim, Sungjin Lee* [AUGNLG: Few-shot Natural Language Generation using Self-trainedData Augmentation](https://github.com/XinnuoXu/AugNLG)" *Proceedings of ACL 2021* :tada: :tada: :tada:
 
 ## Environment setup
 
@@ -33,4 +35,4 @@ pip install wordsegment
 ```
 
 ## Data
-Follow the instruction here[https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit] to download the reddit data.
+Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data.
