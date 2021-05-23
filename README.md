@@ -10,7 +10,7 @@ git submodule init
 git submodule update
 
 cd ./NLG/SC-GPT
-git checkout master
+git checkout public
 ```
 
 ### Step2: Initialize eenvironment
