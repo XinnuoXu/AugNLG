@@ -1,0 +1,3 @@
+[submodule "SC-GPT"]
+	path = SC-GPT
+	url = https://github.com/XinnuoXu/SC-GPT.git
