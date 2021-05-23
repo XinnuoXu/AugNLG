@@ -1,0 +1,50 @@
+INFORM ( subcategory = pop ; address_of_location = 261 driggs avenue, brooklyn ) & it 's a pop event taking place in 261 driggs avenue , brooklyn .
+REQUEST ( event_name = ? ; city = ? ; date = ? ) & what event ? and do you want me to look for a specific city or date ?
+REQUEST ( city = ? ; date = ? ; event_name = ? ) & is there any city preference that i should search in ? is there any date of your preference and what is your favorite event ?
+REQUEST ( date = ? ; event_name = ? ; city = ? ) & what date and what event ? which city do you prefer ?
+REQUEST ( category = music, sports ) & music , sports , or any other category ?
+REQ_MORE ( none = none ) & would you be needing anything else today ?
+INFORM ( venue = citi field ; venue_address = 123-01 roosevelt avenue ) @ NOTIFY_SUCCESS ( none = none ) & the citi field venue is located at 123-01 roosevelt avenue . your reservation has been confirmed .
+INFORM ( address_of_location = 261 driggs avenue, brooklyn ; event_location = warsaw ) @ NOTIFY_SUCCESS ( none = none ) & your tickets will be waiting for you . it is at 261 driggs avenue , brooklyn at warsaw .
+CONFIRM ( number_of_tickets = 4 ; date = march 9th ) & so that 's 4 tickets to the event on march 9th .
+REQUEST ( date = ? ; city_of_event = ? ; number_of_seats = ? ) & i can help you with that . do you know when and where you want to go ? how many tickets do i have to buy ?
+REQUEST ( date = ? ; event_name = ? ) & is there a preferred date of your choosing ? do you know the title of the event ?
+REQUEST ( event_name = ? ; city_of_event = ? ) & what event are you thinking of and what city should i look for it in ?
+INFORM ( venue = chase field ) @ NOTIFY_SUCCESS ( none = none ) & i 'll reserve your tickets . the vent will be at chase field .
+CONFIRM ( event_name = giants vs diamondbacks ; city = san francisco ) & i 'll get you tickets for giants vs diamondbacks in san francisco , is that correct ?
+REQUEST ( date = ? ; number_of_seats = ? ; event_name = ? ) & is there a specific date you want for the event ? which is the number of the events you would like to buy ? do you enjoy some particular event ?
+REQUEST ( event_name = ? ; date = ? ) & what are your event interest and your date preference ?
+CONFIRM ( event_name = young the giant ; number_of_tickets = 1 ; date = march 9th ; city = las vegas ) & book young the giant 1 ticket on march 9th in las vegas
+REQUEST ( city_of_event = ? ) & where do you want to search in ?
+REQUEST ( number_of_seats = ? ; event_name = ? ) & is there a event you have in mind ? how many tickets do you need ?
+CONFIRM ( event_name = thee oh sees ; number_of_tickets = 4 ) & let me make sure . do you want 4 tickets to thee oh sees ?
+REQUEST ( city_of_event = ? ; category = ? ) & please tell me in which city to search and for what type of events .
+REQUEST ( number_of_seats = ? ; date = ? ; event_name = ? ) & i 'll need some additional information . do you have a certain event in mind and do you know the date you want to attend ? how many tickets do you need ?
+REQUEST ( event_name = ? ; date = march 3rd ; number_of_tickets = ? ) & what type of event ? would you like me to look for march 3rd ? how many tickets do you need ?
+REQUEST ( city_of_event = ? ; number_of_seats = ? ) & what city do you prefer and how many tickets do you need ?
+INFORM ( address_of_location = 56-15 northern boulevard woodside ) @ NOTIFY_SUCCESS ( none = none ) & your tickets have been ordered and their address is 56-15 northern boulevard woodside .
+REQUEST ( city_of_event = ? ; event_name = ? ) & is there a specific event you want to go to ?
+REQUEST ( date = ? ; number_of_tickets = ? ; city = ? ) & do you have a preferred date ? how many tickets ? what city should i look in ?
+REQUEST ( city_of_event = ? ; date = ? ; number_of_seats = ? ) & how many tickets will you need and in which city and on which date ?
+OFFER ( date = march 13th ; event_name = nationals vs brewers ; venue = nationals park ) @ INFORM_COUNT ( count = 1 ) & nationals vs brewers will be at nationals park for 1 day , march 13th .
+REQUEST ( number_of_tickets = ? ; date = ? ; city = ? ) & how many tickets would you like to purchased ? also in which city and on which date is this event taking place ?
+INFORM ( category = hip hop ; venue_address = 200 south 3rd street ) & the event is hip hop at 200 south 3rd street .
+REQUEST ( date = ? ; number_of_seats = ? ; city_of_event = ? ) & what date are you planning for and how many people will be attending this event ? what city should i be looking at ?
+REQUEST ( event_name = ? ; number_of_tickets = ? ; city = ? ) & do you know to what event you want to go ? how many tickets do you need and in which city do you want to look for ?
+REQUEST ( date = ? ) & is there a specific date for when you want the event to happen ?
+REQUEST ( number_of_tickets = ? ; event_name = ? ; date = ? ) & what show are you talking about ? do you want just 1 ticket ? and when do you want to go see it ?
+REQUEST ( date = march 1st ; event_name = ? ; number_of_tickets = ? ) & is march 1st ok ? please also tell me the number of tickets as well as the type of event you prefer .
+REQUEST ( category = music, sports ; city_of_event = ? ) & anything in particular ? such as music or sports ? also which location ?
+INFORM ( time = 7:30 pm ; category = country ) & 7:30 pm . country .
+INFORM ( time = 6 pm ) & it will start at 6 pm .
+REQUEST ( number_of_seats = ? ; city_of_event = ? ; event_name = ? ) & okay ! how many tickets would you like ? which city would you like the event to be in ? is there a particular event you 'd like to attend ?
+INFORM ( venue_address = 100 california drive ; category = pop ) & it is a pop event at 100 california drive .
+INFORM ( time = 6:30 pm ; venue = the teragram ballroom ) @ NOTIFY_SUCCESS ( none = none ) & i 've successfully placed your reservation . enjoy ! the venue is the teragram ballroom and the starting time is 6:30 pm .
+REQUEST ( date = ? ; city_of_event = ? ) & please give the date and the city to look in
+REQUEST ( city_of_event = ? ; number_of_seats = ? ; date = ? ) & do you have a time and place in mind , and how many tickets are you looking for ?
+CONFIRM ( date = next wednesday ; city_of_event = seattle ) & okay , you would like tickets for next wednesday in seattle . is that correct ?
+INFORM ( subcategory = basketball ) & it 's a basketball game .
+REQUEST ( city = ? ; event_name = ? ; date = ? ) & alright , what event , city and date are you interested in ?
+REQUEST ( number_of_tickets = ? ) & how many tickets do you want ?
+CONFIRM ( number_of_tickets = 3 ; city = new york ) & please confirm you want me to book 3 tickets in the event in new york .
+REQUEST ( event_name = ? ; city = ? ; number_of_tickets = ? ) & sure , i can help with that . first , i need to know how many tickets do you want to buy ? what event and in which city are we looking up ?

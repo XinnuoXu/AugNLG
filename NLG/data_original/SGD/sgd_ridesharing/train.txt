@@ -1,0 +1,48 @@
+REQUEST ( destination = 109 plaza dr. gateway plaza center ; shared_ride = ? ; number_of_riders = ? ) & please confirm the address of destination as 109 plaza dr. gateway plaza center . also for how many person do you want to book the cab and what type of ride you want ?
+REQUEST ( destination = ? ; number_of_riders = ? ; shared_ride = ? ) & where is that ride to and how many people is the cab for and do you want a shared ride ?
+REQUEST ( destination = ? ; number_of_riders = ? ) & where do you wish to go to and for how many people ?
+INFORM ( ride_fare = $9.91 ; wait_time = 8 ) @ NOTIFY_SUCCESS ( none = none ) & your cab has been confirmed and is on it 's way . the cost of the ride is $ 9.91 and should only take 8 minutes .
+REQUEST ( destination = ? ; ride_type = ? ; number_of_seats = ? ) & what is destination , type ride and seats ?
+CONFIRM ( destination = 395 ano nuevo avenue ; ride_type = regular ) & please confirm . a regular ride to 395 ano nuevo avenue .
+REQUEST ( number_of_riders = ? ) & how many people will the ride before ?
+INFORM ( ride_fare = $7.62 ) & it will be $ 7.62 .
+REQUEST ( number_of_riders = ? ; shared_ride = ? ; destination = 5231 college avenue ) & how many people and what kind of ride ? will it be to 5231 college avenue ?
+REQUEST ( number_of_seats = ? ; ride_type = pool, luxury ) & how many seats and do you prefer pool or luxury ?
+CONFIRM ( destination = avenel apartments ; number_of_riders = 2 ) & please confirm you 2 people want go to avenel apartments .
+REQ_MORE ( none = none ) & what else do you have ?
+INFORM ( approximate_ride_duration = 30 ) & the ride lasts around 30 minutes .
+REQUEST ( number_of_seats = ? ; ride_type = luxury, pool ; destination = 29 east allen street 2nd floor ) & ok , no problem . how many people will be riding , and would you prefer a luxury or pool ride ? should i book this ride for 29 east allen street 2nd floor ?
+REQUEST ( destination = 2400 samaritan drive #105 ; ride_type = ? ) & any preference on the type of ride and are you travelling to 2400 samaritan drive # 105 ?
+REQUEST ( shared_ride = ? ; destination = 2306 almaden road ; number_of_riders = ? ) & is the location is 2306 almaden road ? are you interested in shared ride and cab is for how many people ?
+REQUEST ( ride_type = regular, luxury ; destination = 5614 bay street suite 220 ) & are you moving to 5614 bay street suite 220 ? you need regular ride or luxury ride ?
+CONFIRM ( number_of_riders = 2 ; shared_ride = true ) & please confirm that you need the shared cab for 2 .
+CONFIRM ( destination = parker palo alto apartments ; shared_ride = true ) & okay , i 'll get you a shared ride to parker palo alto apartments ?
+REQUEST ( shared_ride = ? ; number_of_riders = ? ; destination = 877 west fremont avenue # k2 ) & you are going to 877 west fremont avenue # k2 ? a shared ride will be good for you and for how many people you want to be ?
+REQUEST ( ride_type = ? ; destination = 2525 sand creek road ; number_of_seats = ? ) & which type of ride you want ? is your location is 2525 sand creek road and what is your seat requirement ?
+INFORM ( wait_time = 10 ; ride_fare = $20.06 ) & the cab will be here in 10 and it costs $ 20.06
+CONFIRM ( number_of_seats = 2 ; ride_type = pool ) & so you 'd like 2 seats for a car pool ?
+REQUEST ( number_of_riders = ? ; shared_ride = ? ) & how many persons ? do you like shared ride ?
+REQUEST ( shared_ride = ? ; number_of_riders = ? ) & how many people come in the cab and would you also prefer shared ride ?
+REQUEST ( number_of_seats = ? ; destination = 3511 school street ; ride_type = luxury, regular ) & how many people will be riding ? what type of fare would you like luxury , regular , or something else ? will you be going too 3511 school street ?
+REQUEST ( ride_type = regular, luxury ; number_of_seats = ? ; destination = 15992 los gatos boulevard ) & would you like any particular kind of ride like regular or luxury ? how many seats do you need ? you 're headed to 15992 los gatos boulevard , correct ?
+REQUEST ( number_of_riders = ? ; destination = ? ; shared_ride = ? ) & for how many passengers please and what is your destination ? also are you okay with a shared ride ?
+CONFIRM ( destination = 1599 hopkins street ; number_of_seats = 1 ) & please confirm changes : there is 1 person in your group and the destination is 1599 hopkins street .
+REQUEST ( ride_type = luxury, regular ; number_of_seats = ? ) & do you prefer a luxury or regular ride ? how many seats ?
+GOODBYE ( none = none ) & have a great day !
+CONFIRM ( destination = 301 sycamore valley road ; number_of_riders = 1 ; shared_ride = true ) & i 'd like a shared cab for 1 person to go to 301 sycamore valley road .
+INFORM ( approximate_ride_duration = 19 ; ride_fare = $30.87 ) @ NOTIFY_SUCCESS ( none = none ) & the journey will last for about 19 minutes and it would cost $ 30.87 . i 've booked the cab for you and its on the way .
+REQUEST ( destination = 61 washington street ) & is your destination 61 washington street ?
+REQUEST ( shared_ride = ? ) & are you okay with a shared ride ?
+REQUEST ( number_of_seats = ? ) & how many seats are you looking at ?
+INFORM ( wait_time = 10 ) & please wait for another 10 minutes .
+NOTIFY_FAILURE ( none = none ) @ REQ_MORE ( none = none ) & i was unable to get you a ride , is there anything else i can do for you .
+NOTIFY_SUCCESS ( none = none ) & the ride has been booked and the cab will arrive shortly .
+INFORM ( ride_fare = $14.76 ; approximate_ride_duration = 20 ) @ NOTIFY_SUCCESS ( none = none ) & cab has been booked . it will take 20 minutes and cost $ 14.76 .
+REQUEST ( number_of_seats = ? ; destination = 2211 parkside drive ) & how many people are going and do you need to get to 2211 parkside drive ?
+REQUEST ( shared_ride = ? ; destination = ? ) & want a shared ride and where is it to ?
+CONFIRM ( destination = hollywood walk of fame ; number_of_seats = 1 ; ride_type = pool ) & please confirm the following : you would like a ride to the hollywood walk of fame in a pool ride for 1 person .
+REQUEST ( number_of_riders = ? ; destination = 430 east calaveras boulevard ) & is your destination 430 east calaveras boulevard ? and for how many people ?
+REQUEST ( destination = 2575 california street #90 ; number_of_seats = ? ; ride_type = luxury, pool ) & a luxury or pool ? is the address 2575 california street # 90 ?
+REQUEST ( destination = 180 hamilton avenue ; shared_ride = ? ) & is a shared ride okay ? you are going to 180 hamilton avenue , correct ?
+REQUEST ( ride_type = ? ) & what type of ride ?
+REQUEST ( destination = 17251 hesperian boulevard ; number_of_seats = ? ) & can i confirm that is to 17251 hesperian boulevard ? how many seats do you need in the cab ?

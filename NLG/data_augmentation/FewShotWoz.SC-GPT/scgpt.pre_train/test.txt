@@ -1,0 +1,100 @@
+ridesharing_1 { confirm ( destination = 2229 clement street ; number_of_riders = 2 ; shared_ride = true ) }  & please confirm the following details: you would like to go to 2229 clement street. you would like a cab for a party of 2, and a shared ride. is this correct?
+flights_3 { goodbye (  = ? ) }  & have a great day.
+music_1 { confirm ( song_name = night witches ; playback_device = tv ) }  & kindly ensure that, the song night witches is playing on tv.
+buses_2 { confirm ( origin = san francisco ; destination = san diego ; departure_date = march 4th ; departure_time = 2 pm ; group_size = 4 ; fare_type = economy ) }  & you need tickets for 4 people from san francisco on march 4th at 2 pm destined for san diego. the tickets are economy, is this correct?
+restaurants_1 { request ( time = ? ) }  & what time do you wish to eat?
+banks_1 { confirm ( account_type = savings ; amount = $1,490 ; recipient_account_name = abhinav ; recipient_account_type = checking ) }  & sending $1,490 from savings account to abhinav checking.
+buses_2 { request ( departure_date = ? ; origin = ? ) }  & when are you planning to leave and where will you be leaving from?
+hotels_2 { request ( check_in_date = ? ; number_of_adults = ? ) }  & what day are you checking in and how many people?
+rentalcars_1 { req_more (  = ? ) }  & can i do anything else for you?
+music_2 { offer ( song_name = hate me ; artist = eurielle ; album = arcadia ) @ inform_count ( count = 10 ) }  & i found 10 songs. what do you think about hate me by eurielle in album arcadia?
+services_1 { confirm ( stylist_name = august barbershop ; appointment_time = 3:45 pm ; appointment_date = march 2nd ) }  & to confirm then that is an appointment at august barbershop at 3:45 pm on march 2nd.
+rentalcars_1 { req_more (  = ? ) }  & can i help you with something else?
+services_3 { req_more (  = ? ) }  & whether i need to find any other information?
+ridesharing_2 { goodbye (  = ? ) }  & enjoy the rest of your day.
+restaurants_1 { offer_intent ( intent = reserverestaurant ) }  & shall i make a reservation now?
+rentalcars_2 { offer ( pickup_location = grand central station ; pickup_date = march 9th ; car_type = standard ; car_name = honda accord ) @ inform_count ( count = 7 ) }  & i found 7 available cars, including a standard honda accord you can pick up at grand central station on march 9th. how's that sound?
+rentalcars_1 { confirm ( pickup_location = yvr international airport ; pickup_date = march 3rd ; pickup_time = 2 pm ; dropoff_date = march 4th ; type = standard ) }  & please confirm you want me to book a standard car to be picked up at yvr international airport on march 3rd at 2 pm until march 4th.
+homes_1 { goodbye (  = ? ) }  & have a pleasant afternoon.
+services_4 { request ( appointment_time = ? ) }  & at what time?
+movies_1 { request ( show_date = ? ) }  & what date do you want to go?
+restaurants_2 { notify_success (  = ? ) }  & i have successfully reserved your table.
+travel_1 { offer ( attraction_name = balboa park ; category = park ) }  & there is a great park you can check out called balboa park.
+buses_1 { request ( to_location = ? ) }  & what is your destination?
+rentalcars_1 { notify_success (  = ? ) }  & your booking is complete.
+hotels_3 { confirm ( hotel_name = hotel peyris opera ; check_out_date = march 8th ) }  & please give confirmation details: hotel reservation at hotel peyris opera and date of check out is march 8th.
+buses_2 { inform ( destination_station_name = king street station ) }  & you will arrive to king street station.
+rentalcars_2 { request ( pickup_date = ? ) }  & when will you need it?
+events_2 { offer ( event_name = whitecaps vs colorado rapids ; venue = bc place ) }  & there is a whitecaps vs colorado rapids activity at bc place.
+rentalcars_1 { offer ( pickup_location = intercity terminal ; pickup_date = march 10th ; type = standard ; car_name = corolla ) @ inform_count ( count = 7 ) }  & there are 7 cars that might work. there's a standard corolla available for pickup on march 10th from intercity terminal.
+restaurants_1 { goodbye (  = ? ) }  & have a wonderful day.
+flights_1 { notify_success (  = ? ) }  & your booking is done.
+music_2 { offer ( song_name = butterflies ; artist = kacey musgraves ; album = golden hour ) }  & shall i play butterflies by kacey musgraves from the album golden hour?
+hotels_1 { offer ( hotel_name = 1 hotel brooklyn bridge ; star_rating = 4 ) @ inform_count ( count = 10 ) }  & 10 hotels and 1 hotel brooklyn bridge is a 4 star hotel
+flights_3 { offer ( airlines = united airlines ; outbound_departure_time = 6:05 am ; inbound_departure_time = 9:30 am ; price = $675 ) }  & what about united airlines flight? it leaves at 6:05 am and will take of on return at 9:30 am. it's $675.
+hotels_3 { offer ( hotel_name = bei hotel san francisco ; average_rating = 2.6 ) }  & found one that is bei hotel san francisco with rating 2.6, how about that?
+services_4 { notify_failure (  = ? ) @ req_more (  = ? ) }  & sorry, i couldn't schedule that appointment. is there something else i can do?
+flights_1 { request ( destination_city = ? ; departure_date = ? ; origin_city = ? ) }  & can you tell me where you want to go, and when are you planning to leave? which is the location from where you will leave?
+movies_1 { offer ( movie_name = hellboy ; little ; long shot ) @ inform_count ( count = 7 ) }  & there are 7 movies showing at amc brentwood. would you be interested in hellboy, little or long shot?
+services_2 { offer_intent ( intent = bookappointment ) }  & shall i fix an appointment with this doctor now.
+flights_2 { goodbye (  = ? ) }  & my pleasure. have a good day.
+music_1 { offer ( song_name = up down ; artist = morgan wallen ; album = if i know me ) }  & according to your specif requests, i was thinking about playing up down by morgan wallen from the album if i know me.
+calendar_1 { request ( event_name = ? ; event_time = ? ) }  & what name should i use for it and what time is the event?
+homes_1 { request ( area = ? ; number_of_beds = ? ) }  & is there a specific are you want to me to look for the apartment? which is the number of bedrooms you would like for the apartment to have?
+hotels_4 { offer ( place_name = hyatt centric the pike long beach ; star_rating = 4 ) @ inform_count ( count = 3 ) }  & there are 3 hotels. for example there's the 4 star hotel hyatt centric the pike long beach
+events_2 { request ( city = ? ) }  & which city should i look in?
+music_2 { inform ( genre = pop ) }  & it's pop.
+restaurants_1 { notify_failure (  = ? ) @ req_more (  = ? ) }  & i'm terribly sorry but i can not make that reservation for you at this time. can i help with something else?
+hotels_1 { inform ( street_address = 11 howard street ) }  & it's located at 11 howard street.
+movies_1 { request ( show_date = ? ) }  & what date do you prefer?
+hotels_2 { goodbye (  = ? ) }  & no problem. goodbye.
+services_1 { notify_success (  = ? ) }  & i have successfully booked your appointment.
+rentalcars_1 { request ( dropoff_date = ? ; pickup_date = ? ) }  & what day do you want to rent it? how long do you need the car?
+movies_1 { req_more (  = ? ) }  & cool. anything else i can help with?
+hotels_1 { request ( check_in_date = ? ) }  & what day will you be checking in?
+buses_1 { offer_intent ( intent = buybusticket ) }  & would you like some bus tickets?
+movies_1 { request ( location = ? ) }  & sure! where are you located?
+restaurants_2 { req_more (  = ? ) }  & any thing else
+ridesharing_2 { inform ( ride_fare = $20.31 ; wait_time = 6 ) @ notify_success (  = ? ) }  & your ride has been booked and is on its way. the ride is $20.31 and will be there in 6 minutes.
+homes_1 { req_more (  = ? ) }  & is there anything else i can do for you today?
+restaurants_1 { inform ( phone_number = 415-872-9409 ; serves_alcohol = true ) }  & their phone number is 415-872-9409 and they do serve alcohol.
+flights_1 { notify_success (  = ? ) }  & i have successfully booked the tickets.
+events_1 { inform ( address_of_location = 123-01 roosevelt avenue ) }  & this will be in 123-01 roosevelt avenue
+flights_1 { offer ( airlines = united airlines ; outbound_departure_time = 5:35 pm ; number_stops = 1 ; price = $269 ) @ inform_count ( count = 1 ) }  & i found 1 flight with united airlines. the leaving flight os at 5:35 pm and it has 1 stop. the price is $269
+flights_3 { goodbye (  = ? ) }  & have a great day.
+restaurants_2 { inform ( has_vegetarian_options = false ) @ notify_success (  = ? ) }  & no, they don't and your reservation is now confirmed!
+services_1 { inform ( phone_number = 707-747-0659 ) @ notify_success (  = ? ) }  & yes, it's 707-747-0659 and the appointment has been booked.
+travel_1 { inform ( free_entry = false ; phone_number = 206-684-4075 ) }  & 206-684-4075. no, it's not free.
+flights_1 { offer ( airlines = delta airlines ; outbound_departure_time = 8:40 pm ; inbound_departure_time = 5:40 pm ; price = $212 ) }  & what about delta airlines? they leave at 8:40 pm and the flight back boards at 5:40 pm. it's cost is $212.
+buses_2 { request ( origin = ? ; destination = ? ; departure_date = ? ) }  & when are you traveling? what is your destination and departure station?
+travel_1 { request ( location = ? ) }  & where would you like to look?
+buses_1 { notify_success (  = ? ) }  & i have confirmed your ticket.
+events_2 { goodbye (  = ? ) }  & have a nice day! bye.
+flights_1 { request ( departure_date = ? ) }  & what day will you be leaving?
+flights_1 { goodbye (  = ? ) }  & have a great day.
+ridesharing_2 { confirm ( destination = american church in paris ; number_of_seats = 2 ; ride_type = luxury ) }  & please confirm: getting a luxury ride for 2 people to go to american church in paris.
+flights_1 { inform ( outbound_arrival_time = 0:51 am ) }  & it arrives at 0:51 am.
+rentalcars_1 { inform ( total_price = $50 ) @ notify_success (  = ? ) }  & the car is reserved.in total your reservations cost $50.
+buses_2 { offer ( departure_time = 7:50 am ; price = $47 ; fare_type = flexible ) @ inform_count ( count = 7 ) }  & there are 7 buses you can use a flexible ticket that costs $47. how about the bus that leaves at 7:50 am?
+ridesharing_1 { goodbye (  = ? ) }  & hope you get a nice haircut!
+buses_1 { req_more (  = ? ) }  & is there anything else?
+flights_2 { offer ( airlines = american airlines ; outbound_departure_time = 7:55 am ; inbound_departure_time = 5:35 pm ; fare = $64 ) @ inform_count ( count = 4 ) }  & i found 4. i have an american airlines flight leaving 7:55 am with return flight at 5:35 pm for $64.
+rentalcars_1 { goodbye (  = ? ) }  & have a wonderful day.
+hotels_3 { notify_success (  = ? ) }  & the reservation is complete.
+buses_1 { request ( travelers = ? ) }  & just you?
+calendar_1 { offer ( available_start_time = 8 am ; available_end_time = 4:30 pm ) @ inform_count ( count = 4 ) }  & you have 4 empty slots on your calendar. there is an empty slot from 8 am to 4:30 pm.
+flights_2 { request ( departure_date = ? ) }  & no problem, let's get right on that. what date would you like to depart?
+rentalcars_1 { request ( dropoff_date = ? ; pickup_city = san diego ) }  & how long and san diego pick up ok?
+rentalcars_2 { inform ( total_price = $80 ) }  & it would be $80 all together.
+events_2 { request ( number_of_tickets = ? ) }  & how many tickets do you need?
+rentalcars_2 { inform ( total_price = $96 ) @ notify_success (  = ? ) }  & i've reserved the car. the cost is $96 altogether.
+events_1 { request ( city_of_event = ? ) }  & where would you like me to search?
+media_1 { goodbye (  = ? ) }  & have yourself a wonderful day.
+hotels_4 { request ( stay_length = ? ; check_in_date = ? ) }  & when did you want to check in and how long will you be staying?
+events_2 { offer ( date = march 1st ; event_name = nav with killy ; venue = the fillmore philadelphia ) @ inform_count ( count = 7 ) }  & i was able to locate 7 dates for you. there is a nav with killy event on march 1st at the fillmore philadelphia.
+travel_1 { offer ( attraction_name = 360 chicago ; category = tourist attraction ) }  & 360 chicago is a tourist attraction.
+events_1 { request ( number_of_seats = ? ) }  & how many?
+restaurants_1 { offer ( restaurant_name = brixx pizzeria ; city = petaluma ) @ inform_count ( count = 4 ) }  & the nice brixx pizzeria is among the 4 petaluma restaurants i found.
+events_2 { offer ( date = march 11th ; event_name = pup ; venue = the irenic ) }  & yes, the pup at the irenic event is also on march 11th.
+movies_1 { offer_intent ( intent = buymovietickets ) }  & do you need me to make a reservation for you?
+restaurants_2 { offer ( restaurant_name = california cafe ; number_of_seats = 2 ; date = march 1st ; time = 12 pm ) @ notify_failure (  = ? ) }  & i wasn't able to complete the booking.should i book a table at california cafe for 2 on march 1st at 12 pm instead
