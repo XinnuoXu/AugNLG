@@ -5,7 +5,7 @@
 ### Step1: Clone the repo and update all submodules
 
 ```
-git clone https://github.com/XinnuoXu/NLG_adaption.git
+git clone https://github.com/XinnuoXu/AugNLG.git
 git submodule init
 git submodule update
 
