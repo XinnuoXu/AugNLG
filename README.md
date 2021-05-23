@@ -37,6 +37,7 @@ pip install wordsegment
 ## :seedling: Data
 Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data.
 Extract utterances from the original reddit data by running:
-``
+
+```
 python process_reddit.py -base_path [your_reddit_dir] -utterance_path [wher_to_save_the_utterances] -mode read_raw -min_length [min_num_of_token_in_a_utterance] -max_length [max_num_of_token_in_a_utterance]
 ```
