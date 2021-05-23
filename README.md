@@ -36,6 +36,7 @@ pip install wordsegment
 
 ## :seedling: Data
 Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data.
+
 Extract utterances from the original reddit data by running:
 
 ```
