@@ -13,7 +13,7 @@ cd ./NLG/SC-GPT
 git checkout public
 ```
 
-### Step2: Initialize eenvironment
+### Step2: Initialize environment
 
 ```
 conda create -n FS_NLG python=3.6
@@ -31,3 +31,6 @@ install importlib_metadata
 pip install nltk
 pip install wordsegment
 ```
+
+## Data
+Follow the instruction here[https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit] to download the reddit data.
