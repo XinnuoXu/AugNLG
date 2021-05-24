@@ -42,7 +42,7 @@ pip install wordsegment
 ## :seedling: Data Resource
 Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data. To process the downloaded reddit data with referenced hyper-parameters, directly run:
 ```
-./run_process_reddit.sh
+sh run_process_reddit.sh
 ```
 
 The script includes two sub-steps: 
@@ -59,3 +59,11 @@ python process_reddit.py -utterance_path [where_you_save_the_utterances] -delex_
 
 The outcome of the delexicalization (*-delex_path*) is 2️⃣ in the overall pipeline. Meanwhile, Fewshot NLG Data (*FewShotWOZ* and *FewShotSGD*, 1️⃣ in the overall pipeline) can be found in `./domains`, with no extra processing.
 
+
+## :seedling: Data Augmentation for domains
+To augment data for a certain domain with referenced hyper-parameters, directly run:
+```
+sh ./run.sh
+```
+
+The script includes multiple sub-steps: 
