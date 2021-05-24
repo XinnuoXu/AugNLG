@@ -61,9 +61,9 @@ The outcome of the delexicalization (*-delex_path*) is 2️⃣ in the overall pi
 
 
 ## :seedling: Data Augmentation for domains
-To augment data for a certain domain with referenced hyper-parameters, directly run:
+To augment data for a certain domain with referenced hyper-parameters, directly run (available *[domain_name]* can be found in `./domains`):
 ```
-sh ./run.sh
+sh ./run.sh [domain_name]
 ```
 
 The script includes multiple sub-steps: 
