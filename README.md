@@ -2,7 +2,7 @@
 
 Code for paper "*Xinnuo Xu, Guoyin Wang, Young-Bum Kim, Sungjin Lee* [AUGNLG: Few-shot Natural Language Generation using Self-trainedData Augmentation](https://github.com/XinnuoXu/AugNLG)" *Proceedings of [ACL 2021](https://2021.aclweb.org)* :tada: :tada: :tada:
 
-This work introduce **AugNLG**, a novel data augmentation approach that combines a self-trained neural retrieval model with a few-shot learned NLU model, to automatically create MR-to-Text data from open-domain texts.
+This work introduce **AugNLG**, a novel data augmentation approach that combines a self-trained neural retrieval model with a few-shot learned NLU model, to automatically create MR-to-Text data from open-domain texts. The overall pipeline for the data augmentation is shown as:
 
 ![Frame.jpg](https://github.com/XinnuoXu/AugNLG/blob/master/Frame.jpg)
 
