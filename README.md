@@ -34,7 +34,11 @@ pip install nltk
 pip install wordsegment
 ```
 
-## :seedling: Data
+## :seedling: Overall Pipeline for AugNLG
+
+![alt text](https://github.com/XinnuoXu/ACL-2021-Xinnuo-Submission-FewshotNLG-/blob/main/Frame.pdf)
+
+## :seedling: Data Resource
 Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data.
 
 Extract utterances from the original reddit data by running:
@@ -47,4 +51,4 @@ Delexicalize the utterances by running:
 python process_reddit.py -utterance_path [where_you_save_the_utterances] -delex_path [where_to_save_the_delexed_utterances] -mode delexicalization -thread_num [thread_num_for_processing]
 ```
 
-Fewshot NLG Data (FewShotWOZ and FewShotSGD) can be found at `./domains`
+Fewshot NLG Data (*FewShotWOZ* and *FewShotSGD*) can be found at `./domains`
