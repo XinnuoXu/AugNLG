@@ -1,6 +1,10 @@
 # AugNLG
 
-Code for paper "*Xinnuo Xu, Guoyin Wang, Young-Bum Kim, Sungjin Lee* [AUGNLG: Few-shot Natural Language Generation using Self-trainedData Augmentation](https://github.com/XinnuoXu/AugNLG)" *Proceedings of [ACL 2021](https://2021.aclweb.org)* :tada: :tada: :tada:
+Code for paper "*Xinnuo Xu, Guoyin Wang, Young-Bum Kim, Sungjin Lee* [AUGNLG: Few-shot Natural Language Generation using Self-trainedData Augmentation](https://github.com/XinnuoXu/AugNLG)" *Proceedings of [ACL 2021](https://2021.aclweb.org)* main conference :tada: :tada: :tada:
+
+This work introduce **AugNLG**, a novel data augmentation approach that combines a self-trained neural retrieval model with a few-shot learned NLU model, to automatically create MR-to-Text data from open-domain texts. The overall pipeline for the data augmentation is shown as:
+
+![Frame.jpg](https://github.com/XinnuoXu/AugNLG/blob/master/Frame.jpg)
 
 ## :seedling: Environment setup
 
@@ -34,7 +38,8 @@ pip install nltk
 pip install wordsegment
 ```
 
-## :seedling: Data
+
+## :seedling: Data Resource
 Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data.
 
 Extract utterances from the original reddit data by running:
@@ -46,3 +51,8 @@ Delexicalize the utterances by running:
 ```
 python process_reddit.py -utterance_path [where_you_save_the_utterances] -delex_path [where_to_save_the_delexed_utterances] -mode delexicalization -thread_num [thread_num_for_processing]
 ```
+
+The outcome of the delexicalization (*-delex_path*) is 2️⃣ in the overall pipeline.
+
+Fewshot NLG Data (*FewShotWOZ* and *FewShotSGD*, 1️⃣ in the overall pipeline) can be found in `./domains`.
+
