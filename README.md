@@ -36,7 +36,7 @@ pip install wordsegment
 
 ## :seedling: Overall Pipeline for AugNLG
 
-![alt text](https://github.com/XinnuoXu/AugNLG/blob/master/Frame.pdf)
+[Frame.pdf](https://github.com/XinnuoXu/AugNLG/blob/master/Frame.pdf)
 
 ## :seedling: Data Resource
 Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data.
