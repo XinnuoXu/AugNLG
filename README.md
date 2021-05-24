@@ -52,6 +52,7 @@ Delexicalize the utterances by running:
 python process_reddit.py -utterance_path [where_you_save_the_utterances] -delex_path [where_to_save_the_delexed_utterances] -mode delexicalization -thread_num [thread_num_for_processing]
 ```
 
-The outcome of the delexicalization (*-delex_path*) is ![](https://placehold.it/12x12/ff0000/000000?text=B) in the overall pipeline.
+The outcome of the delexicalization (*-delex_path*) is 2️⃣ in the overall pipeline.
 
-Fewshot NLG Data (*FewShotWOZ* and *FewShotSGD*, 🅰️ in the overall pipeline) can be found in `./domains`.
+Fewshot NLG Data (*FewShotWOZ* and *FewShotSGD*, 1️⃣ in the overall pipeline) can be found in `./domains`.
+
