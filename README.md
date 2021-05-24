@@ -42,7 +42,12 @@ pip install wordsegment
 ## :seedling: Data Resource
 Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data.
 
-To process the downloaded reddit data with referenced hyper-parameters, directly run `sh run_process_reddit.sh`. The script includes two sub-steps: 
+To process the downloaded reddit data with referenced hyper-parameters, directly run
+```
+./run_process_reddit.sh
+```
+
+The script includes two sub-steps: 
 
 Extract utterances from the original reddit data by running:
 ```
