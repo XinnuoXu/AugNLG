@@ -40,21 +40,19 @@ pip install wordsegment
 
 
 ## :seedling: Data Resource
-Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data.
-
-To process the downloaded reddit data with referenced hyper-parameters, directly run
+Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data. To process the downloaded reddit data with referenced hyper-parameters, directly run
 ```
 ./run_process_reddit.sh
 ```
 
 The script includes two sub-steps: 
 
-Extract utterances from the original reddit data by running:
+(1) Extract utterances from the original reddit data:
 ```
 python process_reddit.py -base_path [your_reddit_dir] -utterance_path [where_to_save_the_utterances] -mode read_raw -min_length [min_token_num_per_utterance] -max_length [max_token_num_per_utterance] -thread_num [thread_num_for_processing]
 ```
 
-Delexicalize the utterances by running:
+(2) Delexicalize the utterances:
 ```
 python process_reddit.py -utterance_path [where_you_save_the_utterances] -delex_path [where_to_save_the_delexed_utterances] -mode delexicalization -thread_num [thread_num_for_processing]
 ```
