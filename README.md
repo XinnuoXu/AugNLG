@@ -46,3 +46,5 @@ Delexicalize the utterances by running:
 ```
 python process_reddit.py -utterance_path [where_you_save_the_utterances] -delex_path [where_to_save_the_delexed_utterances] -mode delexicalization -thread_num [thread_num_for_processing]
 ```
+
+Fewshot NLG Data (FewShotWOZ and FewShotSGD) can be found at `./domains`
