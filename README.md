@@ -73,7 +73,7 @@ The script includes multiple sub-steps:
 python key_ngrams.py -domain [domain_name] -delex_path [where_you_saved_the_delexed_utterances] -thread_num [thread_num_for_processing] -min_count [minimum_times_phrases_appear_in_corpus] -min_tf_idf [tf_idf_threshold]
 ```
  
-(2) Retrive candidate utterances. The output is directory `./augmented_data/[domain_name].aug/`
+(2) Retrive candidate utterances. The output (3️⃣ in the overall pipeline) is in directory `./augmented_data/[domain_name].aug/`
 ```
 python key_augs.py -domain [domain_name] -delex_path [where_you_saved_the_delexed_utterances] -thread_num [thread_num_for_processing]
 ```
