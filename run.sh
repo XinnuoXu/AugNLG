@@ -5,6 +5,7 @@ DELEX_PATH='./reddit.delex'
 
 # retrive in-domain keywords and reddit utterances
 python key_ngrams.py -domain ${DOMAIN} -delex_path ${DELEX_PATH} -ngrams 2
+python key_augs.py -domain ${DOMAIN} -delex_path ${DELEX_PATH}
 #sh run_rtv.sh ${DOMAIN}
 
 # get pre-train utterances using self-learning
