@@ -68,12 +68,14 @@ sh ./run.sh [domain_name]
 
 The script includes multiple sub-steps: 
 
-(1) Extract keywords from in-domain utterances. The output is file `./augmented_data/[domain_name]_system.kws`.
+**(1) Extract keywords from in-domain utterances**
 ```
 python key_ngrams.py -domain [domain_name] -delex_path [where_you_saved_the_delexed_utterances] -thread_num [thread_num_for_processing] -min_count [minimum_times_phrases_appear_in_corpus] -min_tf_idf [tf_idf_threshold]
 ```
+The output is file `./augmented_data/[domain_name]_system.kws`.
  
-(2) Retrive candidate utterances. The output (3️⃣ in the overall pipeline) is in directory `./augmented_data/[domain_name].aug/`
+**(2) Retrive candidate utterances** 
 ```
 python key_augs.py -domain [domain_name] -delex_path [where_you_saved_the_delexed_utterances] -thread_num [thread_num_for_processing]
 ```
+The output is 3️⃣ in the overall pipeline, which is saved in directory `./augmented_data/[domain_name].aug/`.
