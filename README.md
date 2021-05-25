@@ -81,10 +81,11 @@ Intermediate outcomes contain processed data for step 3️⃣4️⃣5️⃣ in t
 
 
 ## :herb: Data Augmentation for domains
-To augment data for a certain domain with referenced hyper-parameters, directly run (available *[domain_name]* can be found in `./domains`):
+If you want to get access to the augmented data, please go back to the previous section `Data Resource`. If you are interested in doing the data augmentation from scratch, please continue reading. To augment data for a certain domain with referenced hyper-parameters, directly run:
 ```
 sh ./run.sh [domain_name]
 ```
+All available *[domain_name]* can be found in `./domains`. The final augmented MR-to-Text can be found as `./augmented_data/[domain_name]_system.txt`.
 
 The script includes multiple sub-steps: 
 
