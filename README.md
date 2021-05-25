@@ -47,12 +47,12 @@ sh run_process_reddit.sh
 
 The script includes two sub-steps: 
 
-** Extract utterances from the original reddit data **
+**Extract utterances from the original reddit data**
 ```
 python process_reddit.py -base_path [your_reddit_dir] -utterance_path [where_to_save_the_utterances] -mode read_raw -min_length [min_token_num_per_utterance] -max_length [max_token_num_per_utterance] -thread_num [thread_num_for_processing]
 ```
 
-** Delexicalize the utterances **
+**Delexicalize the utterances**
 ```
 python process_reddit.py -utterance_path [where_you_saved_the_utterances] -delex_path [where_to_save_the_delexed_utterances] -mode delexicalization -thread_num [thread_num_for_processing]
 ```
@@ -68,14 +68,15 @@ sh ./run.sh [domain_name]
 
 The script includes multiple sub-steps: 
 
-** Extract keywords from in-domain utterances **
+**Extract keywords from in-domain utterances**
 ```
 python key_ngrams.py -domain [domain_name] -delex_path [where_you_saved_the_delexed_utterances] -thread_num [thread_num_for_processing] -min_count [minimum_times_phrases_appear_in_corpus] -min_tf_idf [tf_idf_threshold]
 ```
 The output is file `./augmented_data/[domain_name]_system.kws`.
  
-** Retrive candidate utterances ** 
+**Retrive candidate utterances** 
 ```
 python key_augs.py -domain [domain_name] -delex_path [where_you_saved_the_delexed_utterances] -thread_num [thread_num_for_processing]
 ```
 The output is 3️⃣ in the overall pipeline, which is saved in directory `./augmented_data/[domain_name].aug/`.
+
