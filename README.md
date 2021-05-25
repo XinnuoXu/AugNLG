@@ -40,19 +40,30 @@ pip install wordsegment
 
 
 ## :seedling: Data Resource
-Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data.
+Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data. To process the downloaded reddit data with referenced hyper-parameters, directly run:
+```
+sh run_process_reddit.sh
+```
 
-Extract utterances from the original reddit data by running:
+The script includes two sub-steps: 
+
+(1) Extract utterances from the original reddit data
 ```
 python process_reddit.py -base_path [your_reddit_dir] -utterance_path [where_to_save_the_utterances] -mode read_raw -min_length [min_token_num_per_utterance] -max_length [max_token_num_per_utterance] -thread_num [thread_num_for_processing]
 ```
 
-Delexicalize the utterances by running:
+(2) Delexicalize the utterances
 ```
 python process_reddit.py -utterance_path [where_you_save_the_utterances] -delex_path [where_to_save_the_delexed_utterances] -mode delexicalization -thread_num [thread_num_for_processing]
 ```
 
-The outcome of the delexicalization (*-delex_path*) is 2️⃣ in the overall pipeline.
+The outcome of the delexicalization (*-delex_path*) is 2️⃣ in the overall pipeline. Meanwhile, Fewshot NLG Data (*FewShotWOZ* and *FewShotSGD*, 1️⃣ in the overall pipeline) can be found in `./domains`, with no extra processing.
 
-Fewshot NLG Data (*FewShotWOZ* and *FewShotSGD*, 1️⃣ in the overall pipeline) can be found in `./domains`.
 
+## :seedling: Data Augmentation for domains
+To augment data for a certain domain with referenced hyper-parameters, directly run (available *[domain_name]* can be found in `./domains`):
+```
+sh ./run.sh [domain_name]
+```
+
+The script includes multiple sub-steps: 
