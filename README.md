@@ -65,7 +65,11 @@ The outcome of the delexicalization (*-delex_path*) is 2️⃣ in the overall pi
 
 ### :seedling: Fewshot NLG Data
 
-Fewshot NLG Data (1️⃣ in the overall pipeline), including *FewShotWOZ* and *FewShotSGD*, can be found in `./domains`, with no extra processing.
+Fewshot NLG Data, *FewShotWOZ* and *FewShotSGD* (1️⃣ in the overall pipeline), can be found in `./domains/[domain_name]/`, with no extra processing required. Each directory contains four files:
+* `train.json`
+* `train.txt`
+* `test.json`
+* `test.txt`
 
 ### :seedling: Intermediate outcomes
 
