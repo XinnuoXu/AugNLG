@@ -6,7 +6,7 @@ This work introduce **AugNLG**, a novel data augmentation approach that combines
 
 ![Frame.jpg](https://github.com/XinnuoXu/AugNLG/blob/master/Frame.jpg)
 
-## :seedling: Environment setup
+## :herb: Environment setup
 
 ### Step1: Clone the repo and update all submodules
 
@@ -39,9 +39,9 @@ pip install wordsegment
 ```
 
 
-## :seedling: Data Resource
+## :herb: Data Resource
 
-### Reddit data and pre-processing
+### :seedling: Reddit data and pre-processing
 
 Follow the instruction [here](https://github.com/PolyAI-LDN/conversational-datasets/tree/master/reddit) to download the reddit data. To process the downloaded reddit data with referenced hyper-parameters, directly run:
 ```
@@ -63,16 +63,16 @@ python process_reddit.py -utterance_path [where_you_saved_the_utterances] -delex
 The outcome of the delexicalization (*-delex_path*) is 2️⃣ in the overall pipeline. 
 
 
-### Fewshot NLG Data
+### :seedling: Fewshot NLG Data
 
 Fewshot NLG Data (1️⃣ in the overall pipeline), including *FewShotWOZ* and *FewShotSGD*, can be found in `./domains`, with no extra processing.
 
-### Intermediate outcomes
+### :seedling: Intermediate outcomes
 
 
 
 
-## :seedling: Data Augmentation for domains
+## :herb: Data Augmentation for domains
 To augment data for a certain domain with referenced hyper-parameters, directly run (available *[domain_name]* can be found in `./domains`):
 ```
 sh ./run.sh [domain_name]
