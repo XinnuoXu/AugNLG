@@ -1,4 +1,4 @@
-# AugNLG
+# AugNLG/augmented_data
 
 This directory contains:
 * **Extracted key phrases** : `[domain_name]_system.kws`
