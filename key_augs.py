@@ -17,16 +17,16 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-domain", default='restaurant', type=str)
     parser.add_argument("-delex_path", default='./reddit.delex', type=str)
-    parser.add_argument("-keyword_path_pattern", default='./augmented_data/[DOMAIN]_system.kws', type=str)
-    parser.add_argument("-retrieve_path_pattern", default='./augmented_data/[DOMAIN].aug/', type=str)
+    parser.add_argument("-keyword_path", default='./augmented_data/[DOMAIN]_system.kws', type=str)
+    parser.add_argument("-retrive_path", default='./augmented_data/[DOMAIN].aug/', type=str)
     parser.add_argument("-thread_num", default=20, type=int)
     args = parser.parse_args()
 
     REDDIT_PATH = args.delex_path
-    OUTPUT_DIR = args.retrieve_path_pattern.replace('[DOMAIN]', args.domain)
+    OUTPUT_DIR = args.retrive_path.replace('[DOMAIN]', args.domain)
     if not os.path.exists(OUTPUT_DIR):
         os.system('mkdir ' + OUTPUT_DIR)
-    input_path = args.keyword_path_pattern.replace('[DOMAIN]', args.domain)
+    input_path = args.keyword_path.replace('[DOMAIN]', args.domain)
 
     pool = multiprocessing.Pool(processes=args.thread_num)
     kws_list = []

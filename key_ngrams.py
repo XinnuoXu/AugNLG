@@ -54,9 +54,9 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument("-domain", default='restaurant', type=str)
-    parser.add_argument("-in_domain_path_pattern", default='./domains/[DOMAIN]/train.txt', type=str)
+    parser.add_argument("-in_domain_path", default='./domains/[DOMAIN]/train.txt', type=str)
     parser.add_argument("-delex_path", default='./reddit.delex', type=str)
-    parser.add_argument("-keyword_path_pattern", default='./augmented_data/[DOMAIN]_system.kws', type=str)
+    parser.add_argument("-keyword_path", default='./augmented_data/[DOMAIN]_system.kws', type=str)
     parser.add_argument("-out_domain_example_num", default=636486504, type=int)
     parser.add_argument("-out_domain_sample_num", default=50000, type=int)
     parser.add_argument("-ngrams", default=2, type=int)
@@ -66,9 +66,9 @@ if __name__ == '__main__':
     parser.add_argument("-min_tf_idf", default=0.01, type=float)
     args = parser.parse_args()
 
-    in_domain_path_pattern = args.in_domain_path_pattern
+    in_domain_path = args.in_domain_path
     delex_path = args.delex_path
-    keyword_path_pattern = args.keyword_path_pattern
+    keyword_path = args.keyword_path
     out_domain_example_num = args.out_domain_example_num
     out_domain_sample_num = args.out_domain_sample_num
 
@@ -85,7 +85,7 @@ if __name__ == '__main__':
 
     # Get in domain examples
     in_domain_exps = []
-    in_domain_path = in_domain_path_pattern.replace('[DOMAIN]', args.domain)
+    in_domain_path = in_domain_path.replace('[DOMAIN]', args.domain)
     for line in open(in_domain_path):
         flist = line.strip().split(' & ')
         if len(flist) != 2:
@@ -148,7 +148,7 @@ if __name__ == '__main__':
         filtered_ngrams[key] = new_dict[key]
 
     # Write out
-    fpout = open(keyword_path_pattern.replace('[DOMAIN]', args.domain), 'w')
+    fpout = open(keyword_path.replace('[DOMAIN]', args.domain), 'w')
     for item in sorted(filtered_ngrams.items(), key = lambda d:d[1], reverse=True):
         fpout.write(item[0] + '\n')
     fpout.close()
