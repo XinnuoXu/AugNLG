@@ -72,7 +72,11 @@ Fewshot NLG Data, *FewShotWOZ* and *FewShotSGD* (1️⃣ in the overall pipeline
 * `test.txt`
 
 ### :seedling: Intermediate outcomes
-
+Intermediate outcomes contain processed data for step 3️⃣4️⃣5️⃣ in the overall pipeline.
+* Extracted key phrases for each domain: `./augmented_data/[domain_name]_system.kws`
+* Self-leaning data for each iteration: `./augmented_data/[domain_name]_system.kws`
+* Retrieved utterance candidates (3️⃣): `./augmented_data/[domain_name].aug/`
+* Augmented MR-to-Text (5️⃣): `./augmented_data/[domain_name]_system.txt`
 
 
 
