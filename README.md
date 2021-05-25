@@ -54,7 +54,7 @@ python process_reddit.py -base_path [your_reddit_dir] -utterance_path [where_to_
 
 (2) Delexicalize the utterances
 ```
-python process_reddit.py -utterance_path [where_you_save_the_utterances] -delex_path [where_to_save_the_delexed_utterances] -mode delexicalization -thread_num [thread_num_for_processing]
+python process_reddit.py -utterance_path [where_you_saved_the_utterances] -delex_path [where_to_save_the_delexed_utterances] -mode delexicalization -thread_num [thread_num_for_processing]
 ```
 
 The outcome of the delexicalization (*-delex_path*) is 2️⃣ in the overall pipeline. Meanwhile, Fewshot NLG Data (*FewShotWOZ* and *FewShotSGD*, 1️⃣ in the overall pipeline) can be found in `./domains`, with no extra processing.
@@ -67,3 +67,8 @@ sh ./run.sh [domain_name]
 ```
 
 The script includes multiple sub-steps: 
+(1) Extract keywords from in-domain utterances. The output is file `./augmented_data/[DOMAIN]_system.kws`.
+```
+python key_ngrams.py -domain [domain_name] -delex_path [where_you_saved_the_delexed_utterances] -thread_num [thread_num_for_processing] -min_count [minimum_times_phrases_appear_in_corpus] -min_tf_idf [tf_idf_threshold]
+```
+(2) 
