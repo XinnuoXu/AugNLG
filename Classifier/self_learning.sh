@@ -1,12 +1,13 @@
 #!/bin/bash
 
-DOMAIN=$1
-ITERATION=$2
+TARGET_DIR=$1
+TRAIN_DIR=$2
+ITERATION=$3
 
-cp data.${DOMAIN}/train.txt data.${DOMAIN}/train_${ITERATION}.txt
-sh reset_all.sh $DOMAIN
-sh scripts/preprocess_json.sh $DOMAIN
-sh scripts/preprocess.sh $DOMAIN
-sh scripts/train_2round.sh $DOMAIN
-sh scripts/dev_2round.sh $DOMAIN
-sh scripts/test_2round.sh $DOMAIN
+cp ${TARGET_DIR}/train.txt ${TARGET_DIR}/train_${ITERATION}.txt
+sh reset_all.sh ${TRAIN_DIR} 
+sh scripts/preprocess_json.sh ${TARGET_DIR} ${TRAIN_DIR}
+sh scripts/preprocess.sh ${TRAIN_DIR}
+sh scripts/train_2round.sh ${TRAIN_DIR} 
+sh scripts/dev_2round.sh ${TARGET_DIR} ${TRAIN_DIR}
+sh scripts/test_2round.sh ${TARGET_DIR} ${TRAIN_DIR}

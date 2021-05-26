@@ -1,8 +1,8 @@
 #!/bin/bash
 
-DOMAIN=$1
-BERT_DATA_PATH=/scratch/xxu/few_shot_nlg/${DOMAIN}.data/fsnlg
-MODEL_PATH=/scratch/xxu/few_shot_nlg/${DOMAIN}.models/
+TRAIN_PATH=$1
+BERT_DATA_PATH=${TRAIN_PATH}.data/fsnlg
+MODEL_PATH=${TRAIN_PATH}.models/
 
 python train.py  \
 	-mode train \

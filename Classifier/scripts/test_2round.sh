@@ -1,9 +1,10 @@
 #!/bin/bash
 
-DOMAIN=$1
-BERT_DATA_PATH=/scratch/xxu/few_shot_nlg/${DOMAIN}.data/fsnlg 
-MODEL_PATH=/scratch/xxu/few_shot_nlg/${DOMAIN}.models/
-RESULT_PATH=./data.${DOMAIN}/prediction.txt
+RAW_PATH=$1
+TRAIN_PATH=$2
+BERT_DATA_PATH=${TRAIN_PATH}.data/fsnlg 
+MODEL_PATH=${TRAIN_PATH}.models/
+RESULT_PATH=./${RAW_PATH}/prediction.txt
 
 python train.py \
 	-mode test \

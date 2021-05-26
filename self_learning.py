@@ -37,9 +37,8 @@ if __name__ == '__main__':
     train_path = '%s/%s' % (args.tmp_training_path, args.domain)
     target_path = args.self_learning_path.replace('[DOMAIN]', args.domain)
     command = 'cd ./Classifier; sh initial_train.sh ../%s ../%s; cd ../;' % (target_path, train_path)
-    os.system(command)
+    #os.system(command)
 
-    '''
     last_pos_num = 0
     for iteration in range(1, args.max_round+1):
         pos_num = self_training(args)
@@ -47,6 +46,6 @@ if __name__ == '__main__':
             print ('Iteration finished in round:', iteration)
             break
         last_pos_num = pos_num
-        os.system('cd ./Classifier; sh self_learning.sh '+args.domain+' '+str(iteration)+';cd ../;')
+        command = 'cd ./Classifier; sh self_learning.sh ../%s ../%s %d; cd ../;' % (target_path, train_path, iteration)
+        os.system(command)
 
-    '''
