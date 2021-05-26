@@ -14,16 +14,24 @@ def grep(kws):
 
 if __name__ == '__main__':
 
+    def str2bool(v):
+        if v.lower() in ('yes', 'true', 't', 'y', '1'):
+            return True
+        elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+            return False
+        else:
+            raise argparse.ArgumentTypeError('Boolean value expected.')
+
     parser = argparse.ArgumentParser()
     parser.add_argument("-domain", default='restaurant', type=str)
     parser.add_argument("-delex_path", default='./reddit.delex', type=str)
     parser.add_argument("-keyword_path", default='./augmented_data/[DOMAIN]_system.kws', type=str)
-    parser.add_argument("-retrive_path", default='./augmented_data/[DOMAIN].aug/', type=str)
+    parser.add_argument("-retrieve_path", default='./augmented_data/[DOMAIN].aug/', type=str)
     parser.add_argument("-thread_num", default=20, type=int)
     args = parser.parse_args()
 
     REDDIT_PATH = args.delex_path
-    OUTPUT_DIR = args.retrive_path.replace('[DOMAIN]', args.domain)
+    OUTPUT_DIR = args.retrieve_path.replace('[DOMAIN]', args.domain)
     if not os.path.exists(OUTPUT_DIR):
         os.system('mkdir ' + OUTPUT_DIR)
     input_path = args.keyword_path.replace('[DOMAIN]', args.domain)
