@@ -6,7 +6,7 @@ This work introduce **AugNLG**, a novel data augmentation approach that combines
 
 ![Frame.jpg](https://github.com/XinnuoXu/AugNLG/blob/master/Frame.jpg)
 
-## :herb: Environment setup
+## :herb: Environment setup :herb:
 
 ### Step1: Clone the repo and update all submodules
 
@@ -39,7 +39,7 @@ pip install wordsegment
 ```
 
 
-## :herb: Data Resource
+## :herb: Data Resource :herb:
 
 ### :seedling: Reddit data and pre-processing
 
@@ -80,12 +80,12 @@ Intermediate outcomes contain processed data for step 3️⃣4️⃣5️⃣ in t
 
 
 
-## :herb: Data Augmentation for domains
+## :herb: Data Augmentation for domains :herb:
 If you want to get access to the augmented data, please go back to the previous section `Data Resource`. If you are interested in doing the data augmentation from scratch, please continue reading. To augment data for a certain domain with referenced hyper-parameters, directly run:
 ```
 sh ./run.sh [domain_name]
 ```
-All available *[domain_name]* can be found in `./domains`. The final augmented MR-to-Text can be found as `./augmented_data/[domain_name]_system.txt`.
+All available *[domain_name]* can be found in `./domains`. The final augmented MR-to-Text can be found in `./augmented_data/[domain_name]_system.txt`.
 
 The script includes multiple sub-steps: 
 
